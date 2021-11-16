@@ -8,6 +8,8 @@ import { Link, NavLink, Switch, useRouteMatch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
+import Main from './Main';
+
 
 function App() {
 
@@ -17,11 +19,12 @@ function App() {
 
       <Header />
 
-
+      <Main />
+      {/* 
       <Route path="/contacto">
         <h2>Este título solo aparece cuando la usuaria entra en la página de contacto</h2>
       </Route>
-      <h1></h1>      <nav>
+      <nav>
         <ul>
           <li>
             <Link to="/">Ir al inicio</Link>
@@ -29,8 +32,8 @@ function App() {
           <li>
             <Link to="/contacto">Ir a contacto</Link>
           </li>
-        </ul>
-      </nav>
+        </ul>  </nav>*/}
+
       <Footer />
     </>
   );
