@@ -1,0 +1,2 @@
+# JUMP2DIGITAL-Minimalistic-checkout-
+JUMP2DIGITAL HACKATON
