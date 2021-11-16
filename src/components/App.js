@@ -6,6 +6,8 @@ import callToApi from '../services/api'; // Importamos el servicio que acabamos 
 //import ls from '../services/localStorage';
 import { Link, NavLink, Switch, useRouteMatch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Header from './Header';
+
 
 function App() {
 
@@ -13,10 +15,7 @@ function App() {
   return (
     <>
 
-      <div className='animation'> <span>hola</span></div>
-
-      <h1 className="title">Hola mundo 2 + 20</h1>
-      <h2>Este título aparece siempre</h2>
+      <Header />
 
 
       <Route path="/contacto">
