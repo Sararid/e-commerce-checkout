@@ -7,7 +7,7 @@ import callToApi from '../services/api'; // Importamos el servicio que acabamos 
 import { Link, NavLink, Switch, useRouteMatch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from './Header';
-
+import Footer from './Footer';
 
 function App() {
 
@@ -31,7 +31,7 @@ function App() {
           </li>
         </ul>
       </nav>
-
+      <Footer />
     </>
   );
 }
