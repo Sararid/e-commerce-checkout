@@ -17,12 +17,16 @@ function App() {
     <>
 
       <Header />
+      <Switch>
+        <Route path="/" exact>
+          <Hero />
 
-      <Hero />
+          <Main />
 
-      <Main />
+          <FeauturedCollection />
 
-      <FeauturedCollection />
+        </Route>
+      </Switch>
       <Footer />
     </>
   );

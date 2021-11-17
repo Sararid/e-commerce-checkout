@@ -1,0 +1,17 @@
+.singleProduct {
+  width: 30%;
+  margin: 10px;
+  display: flex;
+  &__image {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:focus &:hover &:visited {
+    color: black;
+  }
+}
