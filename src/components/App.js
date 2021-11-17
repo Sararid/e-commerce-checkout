@@ -14,6 +14,7 @@ import FeaturedProdDetails from './FeaturedProdDetails';
 import NotFound from "./pages/NotFound";
 import Shop from './pages/Shop';
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -33,7 +34,9 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-
+        <Route path="/cart">
+          <Cart />
+        </Route>
 
         <Route path="*">
           <NotFound />

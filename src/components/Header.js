@@ -13,7 +13,8 @@ const Header = () => {
                     <ul className="header__nav">
                         <li> <Link to="/">Home</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
-                        <li> <Link to="/shop">Shop</Link></li> <BsCart2 />
+                        <li> <Link to="/shop">Shop</Link></li>
+                        <Link to="/cart"> <BsCart2 /></Link>
                     </ul>
                 </nav>
 
