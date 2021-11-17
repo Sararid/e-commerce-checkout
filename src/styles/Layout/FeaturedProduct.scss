@@ -6,6 +6,11 @@
     width: 210px;
     height: 350px;
   }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    margin: 6rem 0;
+  }
 }
 
 a {
