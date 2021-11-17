@@ -15,7 +15,7 @@ const FeauturedCollection = () => {
     const fetchProducts =
         () => {
             // Llamamos al API
-            return fetch('http://makeup-api.herokuapp.com/api/v1/products.json') //
+            return fetch('https://fakestoreapi.com/products') //
                 .then(response => response.json())
 
                 .then(response => {
@@ -25,13 +25,12 @@ const FeauturedCollection = () => {
                         .map(item => {
                             return {
                                 id: item.id,
-                                name: item.name,
+                                title: item.title,
                                 description: item.description,
                                 price: item.price,
-                                image: item.image_link,
+                                image: item.image,
                                 category: item.category
                             }
-
 
                         });
                     dispatch(setProducts(result));

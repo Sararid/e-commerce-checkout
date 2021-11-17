@@ -8,7 +8,7 @@ const FeaturedProduct = () => {
     const products = useSelector((state) => state.allProducts.products)
     // products is an array of prods, we have to map as usuall in order to render the product 
     const renderList = products.map((item) => {
-        const { id, name, price, category, image } = item;
+        const { id, title, price, category, image } = item;
         return (<ul key={id}>
 
 
@@ -16,10 +16,10 @@ const FeaturedProduct = () => {
             <li key={id} id={id} className="singleProduct">
 
                 <Link to={`/product/${id}`}> <Card style={{ width: '18rem' }} >
-                    <Card.Img variant='top' src={image} alt={name} className="singleProduct__image" />
+                    <Card.Img variant='top' src={image} alt={title} className="singleProduct__image" />
                     <Card.Body>
 
-                        <Card.Title>{name}</Card.Title>
+                        <Card.Title>{title}</Card.Title>
 
                         <Card.Subtitle style={{ paddingBottom: 10 }}>
                             <span>€ {price}</span>
