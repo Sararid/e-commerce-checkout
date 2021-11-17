@@ -1,6 +1,5 @@
 import React from 'react'
 import '../styles/Layout/Main.scss'
-import { withRouter } from 'react-router-dom';
 import makeup from '../images/makeup.jpg';
 
 const Main = () => {

@@ -1,0 +1,59 @@
+@import "../Mixins.scss";
+
+.featured {
+  &__product {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 3rem;
+    margin: 1rem;
+    list-style: none;
+    @include flexColumn;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5px;
+    @media all and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 3rem;
+      padding: 6rem;
+    }
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+  &__btn {
+    border: none;
+    color: black;
+    background-color: lightgray;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+  }
+  &__price {
+    font-size: 2rem;
+  }
+}
+
+.featured__header {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: bolder;
+  margin-top: 6rem;
+  @media all and (min-width: 768px) {
+    font-size: 3rem;
+    margin-top: 8rem;
+  }
+}
+
+.featured__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}

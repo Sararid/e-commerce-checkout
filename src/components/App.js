@@ -2,15 +2,14 @@
 
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
-import callToApi from '../services/api'; // Importamos el servicio que acabamos de crear
-//import ls from '../services/localStorage';
 import { Link, NavLink, Switch, useRouteMatch, Route } from 'react-router-dom';
-import PropTypes from 'prop-types';
+
+//layout components 
 import Header from './Header';
-import Footer from './Footer';
+import Hero from './Hero';
 import Main from './Main';
-
-
+import Footer from './Footer';
+import FeauturedCollection from './FeauturedCollection';
 function App() {
 
 
@@ -19,21 +18,11 @@ function App() {
 
       <Header />
 
-      <Main />
-      {/* 
-      <Route path="/contacto">
-        <h2>Este título solo aparece cuando la usuaria entra en la página de contacto</h2>
-      </Route>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Ir al inicio</Link>
-          </li>
-          <li>
-            <Link to="/contacto">Ir a contacto</Link>
-          </li>
-        </ul>  </nav>*/}
+      <Hero />
 
+      <Main />
+
+      <FeauturedCollection />
       <Footer />
     </>
   );
