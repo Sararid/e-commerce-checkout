@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import {
     selectedProducts,
-    removeSelectedProducts,
+    removeSelectedProducts, addToCart
 } from "../redux/actions/productActions";
 import { Card, Button } from "react-bootstrap";
 
@@ -49,7 +49,7 @@ const ProductDetails = () => {
 
                             <Card.Text>{description} </Card.Text>
 
-                            <Button>Add to cart</Button>
+                            <Button onClick={() => dispatch(addToCart(id))}>Add to cart</Button>
                         </Card.Body>
                     </Card>
                 </li>

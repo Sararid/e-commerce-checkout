@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import '../styles/Layout/FeaturedProduct.scss';
 
+
 const FeaturedProduct = () => {
     const products = useSelector((state) => state.allProducts.products)
     // products is an array of prods, we have to map as usuall in order to render the product 
+
     const renderList = products.map((item) => {
         const { id, title, price, category, image } = item;
         return (<ul key={id}>
@@ -26,7 +28,7 @@ const FeaturedProduct = () => {
                             <span>€ {category}</span>
                         </Card.Subtitle>
 
-                        <Button variant="primary">{"Add to cart"}</Button>
+                        <Button variant="primary" >View item</Button>
 
                     </Card.Body>
                 </Card>
