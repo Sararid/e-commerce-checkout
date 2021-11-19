@@ -69,14 +69,14 @@ const ProductDetails = () => {
                         <Card.Body>
                             <Card.Title>{title}</Card.Title>
 
-                            <Card.Subtitle className="mb-2 text-muted">
-                                {category}
+                            <Card.Subtitle className="mb-2 text-muted  ">
+                                <span className="singleProduct__subtitle"> {category} </span>
                             </Card.Subtitle>
-                            <span> € {price}</span>
-                            <p> {description}</p>
+                            <span className="singleProduct__price"> € {price}</span>
+                            <p className="singleProduct__description"> {description}</p>
                             <Card.Text>{data.description} </Card.Text>
 
-                            <Button >Add to cart</Button>
+                            <Button style={{ width: 200 }} variant="secondary">Add to cart</Button>
                         </Card.Body>
                     </Card>
                 </li>

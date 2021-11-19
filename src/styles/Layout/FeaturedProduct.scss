@@ -1,22 +1,26 @@
+@import "../Variables.scss";
 .singleProduct {
-  width: 40%;
+  width: 90%;
   margin: 10px;
   display: flex;
   &__image {
-    width: 210px;
-    height: 350px;
+    width: 80%;
   }
   &__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     margin: 6rem 0;
   }
-}
+  &__subtitle {
+    color: $orange;
+  }
+  &__price {
+    font-weight: bold;
+  }
 
-a {
-  text-decoration: none;
-  color: black;
-  &:focus &:hover &:visited {
-    color: black;
+  &__description {
+    text-shadow: 0 0 $darkBlue;
   }
 }
