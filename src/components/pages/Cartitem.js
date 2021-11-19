@@ -41,7 +41,7 @@ const Cart = (props) => {
                         </button>
                     )}
                     {quantity > 1 && (
-                        <button>
+                        <button onClick={() => decrease(product)}>
                             <BiMinusCircle />{" "}
                         </button>
                     )}
