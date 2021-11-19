@@ -1,19 +1,45 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useContext } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import {
-    selectedProducts,
-    removeSelectedProducts, addToCart
-} from "../redux/actions/productActions";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Spinner } from "react-bootstrap";
+import { ProductsContext } from "../context/products-context";
+
+
+// const ProductDetails = () => {
+//     const { data } = useContext(ProductsContext)
+//     const { productId } = useParams();
+//     const [product, setProduct] = useState();
+
+//     useEffect(() => {
+//         const product = data.find(item => Number(item.id) === Number(productId));
+
+//         if (!product) {
+//             return console.log('error');
+//         } else {
+//             setProduct(product);
+//         }
+
+//     })
+
+//     //  const { image, title, price, description } = product;
+
+//     return (
+//         <>
+//             <img src={product.image} alt={product.title} />
+
+//         </>
+//     )
+// }
+// export default withRouter(ProductDetails);
+
 
 const ProductDetails = () => {
-    const products = useSelector((state) => state.products);
-    const { id, title, price, category, image, description } = products;
+
+
     const { productId } = useParams();
-    const dispatch = useDispatch();
+    const { data } = useContext(ProductsContext)
+    const [product, setProduct] = useState([]);
 
     const fetchProductDetails = async () => {
         const response = await axios
@@ -21,20 +47,21 @@ const ProductDetails = () => {
             .catch((err) => {
                 console.log("err", err);
             });
-        dispatch(selectedProducts(response.data));
+        setProduct(response.data);
     };
 
     useEffect(() => {
         if (productId && productId !== "") fetchProductDetails();
         return () => {
-            dispatch(removeSelectedProducts());
+            console.log('eroor');
         };
     }, [productId]);
 
+    const { id, title, price, category, image, description } = product;
     return (
         <div className='singleProduct__container'>
-            {Object.keys(products).length === 0 ? (
-                <div>...Loading </div>
+            {Object.keys(product).length === 0 ? (
+                <Spinner animation="border" />
             ) : (
                 <li key={id} id={id} className="singleProduct">
                     <Card style={{ width: "25rem" }}>
@@ -46,16 +73,19 @@ const ProductDetails = () => {
                                 {category}
                             </Card.Subtitle>
                             <span> € {price}</span>
+                            <p> {description}</p>
+                            <Card.Text>{data.description} </Card.Text>
 
-                            <Card.Text>{description} </Card.Text>
-
-                            <Button onClick={() => dispatch(addToCart(id))}>Add to cart</Button>
+                            <Button >Add to cart</Button>
                         </Card.Body>
                     </Card>
                 </li>
             )}
         </div>
     );
-};
 
+
+}
 export default ProductDetails;
+
+

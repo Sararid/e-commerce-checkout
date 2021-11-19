@@ -4,14 +4,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import App from './components/App';
-import { Provider } from 'react-redux';
-import store from "./redux/store";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductsContextProvider from './context/products-context';
+import CartContextProvider from './context/cart-context';
 ReactDOM.render(
-    <Provider store={store}>
-        <HashRouter>
-            <App />
-        </HashRouter> </Provider >,
+
+    <HashRouter>
+        <ProductsContextProvider>
+            <CartContextProvider>
+                <App />
+            </CartContextProvider>
+        </ProductsContextProvider>
+    </HashRouter>,
     document.getElementById('root')
 );

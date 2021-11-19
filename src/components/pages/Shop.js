@@ -1,59 +1,32 @@
 import React from 'react';
 import FeaturedProduct from '../FeaturedProduct';
 import '../../styles/Layout/Featured.scss';
-import { useSelector, useDispatch } from 'react-redux';
 
-import { setProducts } from './../../redux/actions/productActions'
-import { useEffect } from 'react';
+import { ProductsContext } from '../../context/products-context';
+
+import { useEffect, useContext } from 'react';
 
 const Shop = () => {
 
+    const { data } = useContext(ProductsContext);
+    const productItems = data.map(product => (
+        <FeaturedProduct {...product} key={product.id} />
+    ));
 
-    const products = useSelector((state) => state)
-    const dispatch = useDispatch();
-
-    const fetchProducts =
-        () => {
-            // Llamamos al API
-            return fetch('https://fakestoreapi.com/products') //
-                .then(response => response.json())
-
-                .then(response => {
-                    // Cuando responde el API podemos limpiar los datos aquí
-                    const result = response
-
-                        .map(item => {
-                            return {
-                                id: item.id,
-                                title: item.title,
-                                description: item.description,
-                                price: item.price,
-                                image: item.image,
-                                category: item.category
-                            }
-
-                        });
-                    dispatch(setProducts(result));
-                })
-                .catch(error => { console.log('err', error) });
-        };
-
-
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    console.log('products are :' + products)
+    console.log(data)
 
     return (
         < >
             <section>
-                <h2 className="featured__header">Shop now</h2>
+                <h2 className="featured__header">SHOP NOW </h2>
                 <div className="featured__product">
-                    <FeaturedProduct />
+                    {
+                        productItems
+                    }
                 </div></section>
         </>
     )
 }
+
 
 export default Shop;

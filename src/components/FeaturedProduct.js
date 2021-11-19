@@ -1,19 +1,22 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import '../styles/Layout/FeaturedProduct.scss';
+import { useContext } from 'react';
+import { CartContext } from '../context/cart-context';
 
+const FeaturedProduct = (props) => {
 
-const FeaturedProduct = () => {
-    const products = useSelector((state) => state.allProducts.products)
     // products is an array of prods, we have to map as usuall in order to render the product 
 
-    const renderList = products.map((item) => {
-        const { id, title, price, category, image } = item;
-        return (<ul key={id}>
+    const { title, image, price, history, id, description, category } = props;
+    const product = { title, image, price, id, description, category };
+    const { addProduct, cartItems, increase } = useContext(CartContext);
+    // const itemInCart = isInCart(product, cartItems);
 
 
+    return (
+        <ul key={id}>
 
             <li key={id} id={id} className="singleProduct">
 
@@ -34,10 +37,8 @@ const FeaturedProduct = () => {
                 </Card>
                 </Link> </li>
         </ul>)
-    })
-    return (
-        <>{renderList}</>
-    )
+
+
 }
 
 export default FeaturedProduct;
