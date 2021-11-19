@@ -85,7 +85,7 @@ const ProductDetails = () => {
                             {
                                 isInCart(product, cartItems) &&
                                 //if item is not in cart we display the add button
-                                < Button style={{ width: 200 }} variant="dark" className="is-black nomad-btn">Add more</Button>
+                                < Button style={{ width: 200 }} variant="dark" className="is-black nomad-btn" onClick={() => increase(product)}>Add more</Button>
                             }
                             <button>Proceed to checkout</button>
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import FeaturedProduct from '../FeaturedProduct';
 import '../../styles/Layout/Featured.scss';
-import { Button } from 'react-bootstrap';
+
 import { ProductsContext } from '../../context/products-context';
 
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 
 const Shop = () => {
 

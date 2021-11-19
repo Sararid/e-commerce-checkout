@@ -1,40 +1,40 @@
-import React from 'react'
-import { Button, Card } from 'react-bootstrap';
+import React, { useContext } from "react";
+import { Button, Card } from "react-bootstrap";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import IImage from '../../images/lipstick2.jpg'
+import { CartContext } from "../../context/cart-context";
+import CartItem from './Cartitem';
+import CartTotal from "./CartTotal";
+
 
 export const isInCart = (product, cartItems) => {
-    return cartItems.find(item => item.id === product.id)
-}
-const Cart = () => {
+    return cartItems.find((item) => item.id === product.id);
+};
+
+
+const Cart = (product) => {
+    const { cartItems, itemCount, total } = useContext(CartContext);
 
 
     return (
         <section>
-
             <Button>
                 <AiOutlineArrowLeft />
                 Back to Shop
             </Button>
-            <Card style={{ width: '18rem' }} >
-                <Card.Img variant='top' src={IImage} alt='' className="singleProduct__image" />
-                <Card.Body>
+            <h1>CART </h1>
 
-                    <Card.Title>product title</Card.Title>
-
-                    <Card.Subtitle style={{ paddingBottom: 10 }}>
-                        <span>€ 10</span>
-                        <span>clothes</span>
-                    </Card.Subtitle>
-
-
-
-                </Card.Body>
-
-            </Card>
+            {
+                cartItems.length === 0 ? <div>Yopur Cart is empty</div> : <>
+                    <div>
+                        {
+                            cartItems.map(item => <CartItem {...item} key={item.id} />) // it will spread out in the componetn cartiem thanks to thr props
+                        }</div>
+                    <CartTotal itemCount={itemCount} total={total} />
+                </>
+            }
 
         </section>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;
