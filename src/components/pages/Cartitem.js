@@ -9,7 +9,7 @@ export const isInCart = (product, cartItems) => {
 };
 const Cart = (props) => {
 
-    const { title, image, price, quantity, id, description, increase, decrease } = props;
+    const { title, image, price, quantity, id, description, increase, decrease, removeProduct } = props;
     const product = { title, image, price, quantity, id, description }
     return (
 
@@ -35,7 +35,7 @@ const Cart = (props) => {
                         <BsPlusCircle />
                     </button>
                     {quantity === 1 && (
-                        <button>
+                        <button onClick={() => removeProduct(product)}>
 
                             <FiTrash />
                         </button>

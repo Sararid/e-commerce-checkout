@@ -12,9 +12,9 @@ export const isInCart = (product, cartItems) => {
 
 
 const Cart = () => {
-    const { cartItems, itemCount, total, increase, decrease } = useContext(CartContext);
+    const { cartItems, itemCount, total, increase, decrease, removeProduct } = useContext(CartContext);
 
-    const addRemove = { increase, decrease }
+    const addRemove = { increase, decrease, removeProduct }
     return (
         <section>
             <Button>
