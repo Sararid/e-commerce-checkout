@@ -4,7 +4,8 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { Card, Button, Spinner } from "react-bootstrap";
 import { ProductsContext } from "../context/products-context";
-
+import { CartContext } from '../context/cart-context';
+import { isInCart } from './pages/Cart';
 
 // const ProductDetails = () => {
 //     const { data } = useContext(ProductsContext)
@@ -40,6 +41,7 @@ const ProductDetails = () => {
     const { productId } = useParams();
     const { data } = useContext(ProductsContext)
     const [product, setProduct] = useState([]);
+    const { addProduct, cartItems, increase } = useContext(CartContext);
 
     const fetchProductDetails = async () => {
         const response = await axios
@@ -75,8 +77,18 @@ const ProductDetails = () => {
                             <span className="singleProduct__price"> € {price}</span>
                             <p className="singleProduct__description"> {description}</p>
                             <Card.Text>{data.description} </Card.Text>
+                            { // we check fist if product is in cart, if not we add it to cart with the reducer addProduct
+                                !isInCart(product, cartItems) &&
+                                //if item is not in cart we display the add button
+                                < Button style={{ width: 200 }} className="is-black nomad-btn" onClick={() => addProduct(product)}>Add to cart</Button>
+                            }
+                            {
+                                isInCart(product, cartItems) &&
+                                //if item is not in cart we display the add button
+                                < Button style={{ width: 200 }} variant="dark" className="is-black nomad-btn">Add more</Button>
+                            }
+                            <button>Proceed to checkout</button>
 
-                            <Button style={{ width: 200 }} variant="secondary">Add to cart</Button>
                         </Card.Body>
                     </Card>
                 </li>

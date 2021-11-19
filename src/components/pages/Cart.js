@@ -2,7 +2,13 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap';
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import IImage from '../../images/lipstick2.jpg'
+
+export const isInCart = (product, cartItems) => {
+    return cartItems.find(item => item.id === product.id)
+}
 const Cart = () => {
+
+
     return (
         <section>
 
