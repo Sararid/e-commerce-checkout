@@ -7,9 +7,10 @@ import { Card } from "react-bootstrap";
 export const isInCart = (product, cartItems) => {
     return cartItems.find((item) => item.id === product.id);
 };
-const Cart = (product) => {
+const Cart = (props) => {
 
-    const { title, image, price, quantity } = product;
+    const { title, image, price, quantity, id, description, increase, decrease } = props;
+    const product = { title, image, price, quantity, id, description }
     return (
 
 
@@ -29,14 +30,14 @@ const Cart = (product) => {
 
                 <div> Quantity: {quantity}</div>
                 <div>
-                    <button>
-                        {" "}
-                        <BsPlusCircle />{" "}
+                    <button onClick={() => increase(product)}>
+
+                        <BsPlusCircle />
                     </button>
                     {quantity === 1 && (
                         <button>
-                            {" "}
-                            <FiTrash />{" "}
+
+                            <FiTrash />
                         </button>
                     )}
                     {quantity > 1 && (

@@ -11,10 +11,10 @@ export const isInCart = (product, cartItems) => {
 };
 
 
-const Cart = (product) => {
-    const { cartItems, itemCount, total } = useContext(CartContext);
+const Cart = () => {
+    const { cartItems, itemCount, total, increase, decrease } = useContext(CartContext);
 
-
+    const addRemove = { increase, decrease }
     return (
         <section>
             <Button>
@@ -27,7 +27,7 @@ const Cart = (product) => {
                 cartItems.length === 0 ? <div>Yopur Cart is empty</div> : <>
                     <div>
                         {
-                            cartItems.map(item => <CartItem {...item} key={item.id} />) // it will spread out in the componetn cartiem thanks to thr props
+                            cartItems.map(item => <CartItem {...item} key={item.id}  {...addRemove} />) // it will spread out in the componetn cartiem thanks to thr props
                         }</div>
                     <CartTotal itemCount={itemCount} total={total} />
                 </>
