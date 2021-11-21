@@ -12,7 +12,7 @@ export const isInCart = (product, cartItems) => {
 
 
 const Cart = () => {
-    const { cartItems, itemCount, total, increase, decrease, removeProduct } = useContext(CartContext);
+    const { cartItems, itemCount, total, increase, decrease, removeProduct, clearCart } = useContext(CartContext);
 
     const addRemove = { increase, decrease, removeProduct }
     return (
@@ -29,7 +29,7 @@ const Cart = () => {
                         {
                             cartItems.map(item => <CartItem {...item} key={item.id}  {...addRemove} />) // it will spread out in the componetn cartiem thanks to thr props
                         }</div>
-                    <CartTotal itemCount={itemCount} total={total} />
+                    <CartTotal itemCount={itemCount} total={total} clearCart={clearCart} />
                 </>
             }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CartTotal = ({ itemCount, total }) => {
+const CartTotal = ({ itemCount, total, clearCart }) => {
     return (
         <div>
             <div>
@@ -10,7 +10,7 @@ const CartTotal = ({ itemCount, total }) => {
                 </div>
                 <div>
                     <button>CHECKOUT</button></div> {/* will add the checkout component and link */}
-                <button>CLEAR CART </button>
+                <button onClick={() => clearCart()}>CLEAR CART </button>
             </div>
         </div>
     )
