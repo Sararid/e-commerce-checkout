@@ -1,0 +1,107 @@
+@import "../Mixins.scss";
+@import "../Variables.scss";
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media all and(min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  &__container {
+    @include flexColumn;
+    align-items: center;
+    margin: 2rem;
+    &--img {
+      height: 30vh;
+      padding: 3rem;
+    }
+    &--card {
+      display: flex;
+      border: solid 1px $GrayishBlue;
+      padding: 0 1rem;
+      // margin: 1rem;
+      align-items: center;
+    }
+    &--title {
+      display: flex;
+      flex-direction: column;
+      margin-right: 3rem;
+      h2,
+      p {
+        font-size: 1.3rem;
+      }
+    }
+    &--total {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: space-between;
+      padding: 2rem 2rem;
+      p {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      button {
+        border: none;
+        color: white;
+        background-color: black;
+        width: 150px;
+        height: 40px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+        margin: 1rem 1rem;
+        @media all and (min-width: 768px) {
+          font-size: 1.5rem;
+          width: 180px;
+        }
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+      }
+    }
+    &--qty {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: 1.2rem;
+      }
+      button {
+        border: none;
+        width: 50px;
+        margin-right: 2px;
+        background-color: transparent;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      div {
+        display: flex;
+      }
+    }
+    &--icon {
+      font-size: 1.5rem;
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    h1 {
+      margin-top: 2rem;
+    }
+  }
+  &__btn {
+    width: 140px;
+    height: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+  }
+}

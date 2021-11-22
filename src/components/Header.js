@@ -14,10 +14,10 @@ const Header = () => {
                 <div className='logo'>  <img className="logo__img" src={logo} alt="logo" /></div>
                 <nav>
                     <ul className="header__nav">
-                        <li> <Link to="/">Home</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li> <Link to="/shop">Shop</Link></li>
-                        <Link to="/cart"> <BsCart2 className="header__icon" />
+                        <li > <Link to="/" className="header__nav--link">Home</Link></li>
+
+                        <li> <Link to="/shop" className="header__nav--link">Shop</Link></li>
+                        <Link to="/cart" className="header__nav--link"> <BsCart2 className="header__icon" />
 
                             {itemCount > 0 ? <span className="header__icon--count">{itemCount}</span> : null}
                         </Link>  </ul> <div className="header__nav--underline">

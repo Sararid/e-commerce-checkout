@@ -15,8 +15,11 @@ import NotFound from "./pages/NotFound";
 import Shop from './pages/Shop';
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Checkout from "./checkout/Checkout";
 
 function App() {
+
+
   return (
     <>
       <Header />
@@ -31,13 +34,13 @@ function App() {
         <Route path="/shop">
           <Shop />
         </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
+
         <Route path="/cart">
           <Cart />
         </Route>
-
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
         <Route path="*">
           <NotFound />
         </Route>

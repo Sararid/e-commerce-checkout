@@ -3,16 +3,15 @@
 .featured {
   &__product {
     border: 1px solid rgba(0, 0, 0, 0.125);
-    padding: 3rem;
+
     margin: 1rem;
     list-style: none;
     @include flexColumn;
     align-content: space-around;
     justify-content: space-between;
-    align-items: stretch;
+
     padding: 5px;
     @media all and (min-width: 768px) {
-      display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -20,11 +19,6 @@
     }
   }
 
-  &__image {
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-  }
   &__btn {
     border: none;
     color: black;
@@ -32,9 +26,6 @@
     width: 200px;
     height: 40px;
     font-weight: bold;
-  }
-  &__price {
-    font-size: 2rem;
   }
 }
 

@@ -3,7 +3,7 @@ import { ProductsContext } from '../context/products-context';
 import FeaturedProduct from './FeaturedProduct';
 import '../styles/Layout/Featured.scss';
 
-
+import '../../src/styles/Layout/FeaturedProduct.scss'
 
 const FeauturedCollection = () => {
     const { data } = useContext(ProductsContext);
@@ -11,10 +11,8 @@ const FeauturedCollection = () => {
         <FeaturedProduct {...product} key={product.id} />
     ));
 
-    console.log(data)
-
     return (
-        < >
+        <>
             <section>
                 <h2 className="featured__header">Featured Collection </h2>
                 <div className="featured__product">

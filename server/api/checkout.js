@@ -1,7 +1,7 @@
 const stripeApi = require('../stripe');
-
+const url = 'http://localhost:3000'
 async function createCheckoutSession(req, res) {
-    const domainUrl = process.env.WEB_APP_URL; //NOW IT WOULD BE THE LOCALHOST 3000 AND LUEGO WHEN WE DEPLOY WE CHANGE IT 
+    const domainUrl = url; //NOW IT WOULD BE THE LOCALHOST 3000 AND LUEGO WHEN WE DEPLOY WE CHANGE IT
     //what will come from the body of the request 
     const { line_items, customer_email } = req.body;
     //we make sure the req body contains the tiems , we will check if it has line items and customer email 

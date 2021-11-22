@@ -8,6 +8,10 @@
     margin: 6rem auto;
   }
 
+  &__title {
+    font-size: 1.6rem;
+  }
+
   &__section {
     display: flex;
     flex-direction: column;
@@ -17,40 +21,38 @@
       justify-content: space-evenly;
     }
     &--img {
-      width: 170px;
+      width: 200px;
       @media all and (min-width: 768px) {
         width: 250px;
       }
       @media all and (min-width: 1200px) {
-        width: 300px;
+        width: 400px;
         margin-right: 3rem;
       }
     }
-
-    &--desc {
-      h2 {
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding: 2rem 0;
-        @media all and (min-width: 768px) {
-          font-size: 1.6rem;
-        }
+    &--title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 1rem 1rem;
+      @media all and (min-width: 768px) {
+        font-size: 1.6rem;
       }
-      p {
-        font-size: 0.9rem;
-        @media all and (min-width: 768px) {
-          font-size: 1.3rem;
-          line-height: 30px;
-        }
+    }
+    &--desc {
+      @media all and (min-width: 768px) {
+        padding: 1rem 1rem;
+        line-height: 25px;
       }
     }
     &--btn {
       border: none;
-      color: black;
-      background-color: lightgray;
-      width: 150px;
+      color: white;
+      background-color: black;
+      width: 140px;
       height: 40px;
       font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 4px;
       @media all and (min-width: 768px) {
         width: 200px;
         font-size: 1.4rem;
@@ -59,6 +61,8 @@
     }
     &--btn:hover {
       cursor: pointer;
+      color: black;
+      background-color: white;
     }
   }
 }

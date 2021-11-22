@@ -13,41 +13,34 @@ const Cart = (props) => {
     const product = { title, image, price, quantity, id, description }
     return (
 
+        <>
+            <div className="cart__container--card"> <img src={image}
+                alt={title} className="cart__container--img" />
 
-        <Card style={{ width: "18rem" }}>
-            <Card.Img
-                variant="top"
-                src={image}
-                alt={title}
-                className="singleProduct__image"
-            />
-            <Card.Body>
-                <Card.Title>{title}</Card.Title>
+                <div className="cart__container--title">   <h2> {title} </h2>    <h3>€{price}</h3></div>
 
-                <Card.Subtitle style={{ paddingBottom: 10 }}>
-                    <span>{price}</span>
-                </Card.Subtitle>
+                <div className="cart__container--qty" ><h3> Quantity: {quantity}</h3>
+                    <div >  <button onClick={() => increase(product)}>
 
-                <div> Quantity: {quantity}</div>
-                <div>
-                    <button onClick={() => increase(product)}>
-
-                        <BsPlusCircle />
+                        <BsPlusCircle className="cart__container--icon" />
                     </button>
-                    {quantity === 1 && (
-                        <button onClick={() => removeProduct(product)}>
+                        {quantity === 1 && (
+                            <button onClick={() => removeProduct(product)}>
 
-                            <FiTrash />
-                        </button>
-                    )}
-                    {quantity > 1 && (
-                        <button onClick={() => decrease(product)}>
-                            <BiMinusCircle />{" "}
-                        </button>
-                    )}
-                </div>
-            </Card.Body>
-        </Card>
+                                <FiTrash className="cart__container--icon" />
+                            </button>
+                        )}
+                        {quantity > 1 && (
+                            <button onClick={() => decrease(product)}>
+                                <BiMinusCircle className="cart__container--icon" />{" "}
+                            </button>
+                        )}
+                    </div> </div></div></>
+
+
+
+
+
 
     );
 };

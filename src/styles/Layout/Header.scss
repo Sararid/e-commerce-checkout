@@ -12,13 +12,17 @@
     flex-wrap: wrap;
     list-style: none;
     &--underline {
-      border-bottom: solid $orange 2px;
+      border: solid $paleOrange 2px;
     }
-    a {
+    &--link {
       list-style: none;
       text-decoration: none;
       color: $black;
       font-weight: bold;
+    }
+    &--link:hover {
+      cursor: pointer;
+      color: $orange;
     }
     @media all and (min-width: 768px) {
       font-size: 1.5rem;
@@ -30,6 +34,10 @@
       font-size: 0.9em;
     }
   }
+  &__icon:hover {
+    cursor: pointer;
+    color: $orange;
+  }
 }
 
 .logo {
@@ -37,8 +45,11 @@
   flex-direction: column;
   align-items: center;
 
-  &__logo {
-    width: 150px;
+  &__img {
+    width: 250px;
+    @media all and (min-width: 768px) {
+      width: 400px;
+    }
 
     @media all and (min-width: 768px) {
       width: 450px;

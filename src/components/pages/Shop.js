@@ -21,7 +21,9 @@ const Shop = () => {
             <section>
                 <h2 className="featured__header">SHOP NOW </h2>
                 <div className="featured__product">
+
                     {
+
                         productItems
                     }
                 </div></section>

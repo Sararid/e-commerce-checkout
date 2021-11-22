@@ -3,13 +3,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  width: 50%;
+  width: 40%;
   height: 3vh;
-  margin: 4rem auto;
+  margin: 3rem auto;
   text-align: center;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1rem;
+  padding-bottom: 3rem;
+
   &__logo {
-    width: 200px;
+    width: 120px;
   }
 }

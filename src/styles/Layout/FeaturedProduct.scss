@@ -1,17 +1,28 @@
 @import "../Variables.scss";
+@import "../Mixins.scss";
+
 .singleProduct {
   width: 90%;
-  margin: 10px;
+  margin: 20px;
   display: flex;
-  &__image {
-    width: 80%;
-  }
-  &__container {
-    display: flex;
+  @media all and(min-width: 560px) {
     flex-direction: column;
     align-items: center;
+  }
+
+  &__image {
+    cursor: pointer;
+    width: 200px;
+    height: 320px;
+    @media all and(min-width: 500px) {
+      width: 90%;
+    }
+  }
+  &__container {
+    @include flexColumn;
+    align-items: center;
     justify-content: space-around;
-    margin: 6rem 0;
+    margin: 2rem 0;
   }
   &__subtitle {
     color: $orange;
@@ -21,6 +32,31 @@
   }
 
   &__description {
-    text-shadow: 0 0 $darkBlue;
+    color: $darkBlue;
   }
+  &__category {
+    color: $darkBlue;
+  }
+  &__btn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  &__btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+}
+
+.singlep-container {
+  @include flexColumn;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
 }
