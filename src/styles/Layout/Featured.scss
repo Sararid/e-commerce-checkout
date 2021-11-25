@@ -3,19 +3,17 @@
 .featured {
   &__product {
     border: 1px solid rgba(0, 0, 0, 0.125);
-
     margin: 1rem;
     list-style: none;
     @include flexColumn;
     align-content: space-around;
     justify-content: space-between;
-
     padding: 5px;
     @media all and (min-width: 768px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin: 1rem 3rem;
+      margin: 4rem;
     }
   }
 

@@ -5,20 +5,42 @@
   width: 90%;
   margin: 20px;
   display: flex;
+  flex-direction: column;
   @media all and(min-width: 560px) {
     flex-direction: column;
     align-items: center;
   }
-
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+  }
+  &__subcard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid honeydew;
+    border-radius: 20px;
+    background-color: honeydew;
+  }
   &__image {
-    cursor: pointer;
     width: 200px;
-    height: 320px;
+    height: 290px;
+    @media all and (min-width: 423px) {
+      width: 210px;
+      height: 280px;
+    }
     @media all and(min-width: 500px) {
       width: 90%;
     }
   }
+  &__title {
+    padding-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
   &__container {
+    padding: 0;
     @include flexColumn;
     align-items: center;
     justify-content: space-around;
@@ -26,26 +48,37 @@
   }
   &__subtitle {
     color: $orange;
+    padding: 0 2rem;
   }
   &__price {
     font-weight: bold;
+    padding: 0 2rem;
   }
 
   &__description {
     color: $darkBlue;
+    padding: 0 2rem;
   }
   &__category {
-    color: $darkBlue;
+    color: $orange;
+  }
+  &__card {
+    padding: 1rem;
+    @media all and (min-width: 768px) {
+      width: 18rem;
+    }
   }
   &__btn {
     background-color: black;
     color: white;
     border: none;
+    border-radius: 5px;
     width: 150px;
     height: 40px;
     font-weight: bold;
     font-size: 1rem;
     margin: 0.5rem 0;
+    margin-right: 3px;
   }
   &__btn:hover {
     cursor: pointer;
@@ -54,7 +87,7 @@
   }
 }
 
-.singlep-container {
+.single-container {
   @include flexColumn;
   justify-content: center;
   align-items: flex-start;

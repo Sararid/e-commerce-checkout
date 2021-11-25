@@ -13,7 +13,7 @@ const FeaturedProduct = (props) => {
 
     const { title, image, price, id, description, category } = props;
     const product = { title, image, price, id, description, category };
-    const { addProduct, cartItems, increase } = useContext(CartContext);
+    const { addProduct, cartItems } = useContext(CartContext);
 
     // const itemInCart = isInCart(product, cartItems);
 
@@ -23,8 +23,8 @@ const FeaturedProduct = (props) => {
 
             <li key={id} id={id} className="singleProduct">
 
-                <Card style={{ width: '18rem' }} >
-                    <Card.Img variant='top' src={image} alt={title} className="singleProduct__image" />
+                <Card style={{ width: '15rem' }} className="singleProduct__card">
+                    <img src={image} alt={title} className="singleProduct__image" />
                     <Card.Body>
 
                         <Card.Title>{title}</Card.Title>

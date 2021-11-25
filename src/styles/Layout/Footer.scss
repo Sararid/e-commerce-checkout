@@ -1,4 +1,7 @@
+@import "../Variables.scss";
+
 .footer {
+  border-top: solid $paleOrange 1px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

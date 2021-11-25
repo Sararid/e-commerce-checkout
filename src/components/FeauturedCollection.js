@@ -7,7 +7,7 @@ import '../../src/styles/Layout/FeaturedProduct.scss'
 
 const FeauturedCollection = () => {
     const { data } = useContext(ProductsContext);
-    const productItems = data.filter((product, i) => i < 4).map(product => (
+    const productItems = data.filter((product, i) => i < 6).map(product => (
         <FeaturedProduct {...product} key={product.id} />
     ));
 

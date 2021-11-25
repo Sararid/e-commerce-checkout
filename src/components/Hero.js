@@ -1,8 +1,8 @@
 import "../styles/Layout/Hero.scss";
 import { Link } from "react-router-dom";
 import { Carousel, Button } from "react-bootstrap";
-import hero from '../images/hero2.jpg'
-import hero2 from '../images/hero_1 (1).jpg'
+import hero from '../images/jeans.jpg'
+import hero2 from '../images/sweater.jpg'
 import hero3 from '../images/store.jpg'
 const Hero = () => {
     return (
@@ -11,7 +11,7 @@ const Hero = () => {
             <Carousel>
                 <Carousel.Item>   <img
                     className="d-block w-100 hero__img"
-                    src={hero}
+                    src={hero2}
                     alt="First slide"
                 />
 
@@ -26,7 +26,7 @@ const Hero = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 hero__img"
-                        src={hero2}
+                        src={hero}
                         alt="Second slide"
                     />
 

@@ -1,9 +1,8 @@
 // Fichero src/components/App.js
 
 import "../styles/App.scss";
-import { useEffect, useState } from "react";
-import { Link, NavLink, Switch, useRouteMatch, Route } from "react-router-dom";
 
+import { Switch, Route } from "react-router-dom";
 //layout components
 import Header from "./Header";
 import Hero from "./Hero";
@@ -13,15 +12,16 @@ import FeauturedCollection from "./FeauturedCollection";
 import FeaturedProdDetails from './FeaturedProdDetails';
 import NotFound from "./pages/NotFound";
 import Shop from './pages/Shop';
-import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Checkout from "./checkout/Checkout";
+import ProcessedPayment from "./checkout/ProcessedPayment";
 
 function App() {
 
 
   return (
     <>
+
       <Header />
       <Switch>
         <Route path="/" exact>
@@ -34,18 +34,21 @@ function App() {
         <Route path="/shop">
           <Shop />
         </Route>
-
         <Route path="/cart">
           <Cart />
         </Route>
         <Route path="/checkout">
           <Checkout />
         </Route>
+        <Route path="/payment-success">
+          <ProcessedPayment />
+        </Route>
         <Route path="*">
           <NotFound />
         </Route>
       </Switch>
       <Footer />
+
     </>
   );
 }
