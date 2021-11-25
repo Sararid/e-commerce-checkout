@@ -9,17 +9,39 @@ import { BsFillCreditCard2BackFill } from "react-icons/bs";
 
 const Payment = () => {
     const { total } = useContext(CartContext);
-
+    const [errorMessage, setErrorMessage] = useState('');
+    const [errorCard, setErrorCard] = useState('');
     const [state, setState] = useState({
+        email: "",
         name: "",
         number: "",
         dates: "",
         cvc: "",
+
     });
-    console.log(state);
+
+
+
+    const handleValidation = () => {
+
+        if (!state.email || !state.email.includes('@')) {
+
+            setErrorMessage('Please enter valid email!')
+        } else {
+            setErrorMessage('')
+        }
+
+        if (!state.number) {
+            setErrorCard('Please enter valid card number!')
+        } else {
+            setErrorCard('')
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+
     };
 
     const handleInputs = (e) => {
@@ -30,9 +52,24 @@ const Payment = () => {
     };
     return (
         <>
-            <fieldset className="containerPay">
-                <form className="containerPay__form" onSubmit={handleSubmit}>
+            <div className="containerPay">
+                <form className="containerPay__form" onSubmit={handleSubmit}
+                >
                     <div className="containerPay__name">
+                        <label htmlFor="name">Email</label>
+                        <input
+                            type="text"
+                            name="email"
+                            id="email"
+                            required
+                            onChange={handleInputs}
+                        />
+
+                        <span style={{
+                            fontWeight: 'bold',
+                            color: 'red',
+                        }}>{errorMessage}</span>
+
                         <label htmlFor="name">Name on Card</label>
                         <input
                             type="text"
@@ -41,6 +78,10 @@ const Payment = () => {
                             required
                             onChange={handleInputs}
                         />
+                        <span style={{
+                            fontWeight: 'bold',
+                            color: 'red',
+                        }}>{errorCard}</span>
                     </div>
                     <div className="containerPay__card">
                         <input
@@ -97,12 +138,14 @@ const Payment = () => {
                 </form>
                 <div className="containerPay__btn">
                     {" "}
-                    <Link to="/payment-success">
-                        {" "}
-                        <button>{`Pay: €${total}`} </button>
-                    </Link>
+
+                    {" "}
+                    <Link to="/payment-success"></Link>
+
+                    <button onClick={handleValidation} >{`Pay: €${total}`} </button>
+
                 </div>{" "}
-            </fieldset>
+            </div>
         </>
     );
 };

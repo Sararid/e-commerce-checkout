@@ -11,8 +11,8 @@ const CountriesDropDown = () => {
             setData(data);
         });
     }, []);
-    const nameCountry = data.map((item) => {
-        return <option>{item.name}</option>;
+    const nameCountry = data.map((item, i) => {
+        return <option key={i}>{item.name}</option>;
     });
     return (
         <>
@@ -22,7 +22,8 @@ const CountriesDropDown = () => {
                 id="country"
                 className="input_country"
             >
-                <option value="">Select a Country</option> {nameCountry}{" "}
+                <option value="">Select a Country</option> {nameCountry}
+
             </select>
         </>
     );
