@@ -20,8 +20,6 @@ const Payment = () => {
 
     });
 
-
-
     const handleValidation = () => {
 
         if (!state.email || !state.email.includes('@')) {
@@ -31,16 +29,16 @@ const Payment = () => {
             setErrorMessage('')
         }
 
-        if (!state.number) {
+        if (!state.number || state.number.match(/^[a-zA-Z]+$/) || state.number.length < 16) {
             setErrorCard('Please enter valid card number!')
         } else {
             setErrorCard('')
         }
+
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
 
     };
 
@@ -78,10 +76,7 @@ const Payment = () => {
                             required
                             onChange={handleInputs}
                         />
-                        <span style={{
-                            fontWeight: 'bold',
-                            color: 'red',
-                        }}>{errorCard}</span>
+
                     </div>
                     <div className="containerPay__card">
                         <input
@@ -98,7 +93,10 @@ const Payment = () => {
                             {" "}
                             <FaCcVisa /> <FaCcMastercard />
                         </div>
-                    </div>{" "}
+                    </div>{" "} <span style={{
+                        fontWeight: 'bold',
+                        color: 'red',
+                    }}>{errorCard}</span>
                     <div className="containerPay__date">
                         <input
                             type="text"
