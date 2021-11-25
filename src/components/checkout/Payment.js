@@ -23,14 +23,15 @@ const Payment = () => {
     const handleValidation = () => {
 
         if (!state.email || !state.email.includes('@')) {
-
             setErrorMessage('Please enter valid email!')
         } else {
             setErrorMessage('')
         }
 
-        if (!state.number || state.number.match(/^[a-zA-Z]+$/) || state.number.length < 16) {
+        if (!state.number || state.number.match(/^[a-zA-Z]+$/)) {
             setErrorCard('Please enter valid card number!')
+        } else if (state.number.length < 16) {
+            setErrorCard('Please enter valid card 16 digit number!')
         } else {
             setErrorCard('')
         }
