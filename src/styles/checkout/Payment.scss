@@ -96,6 +96,19 @@ label {
   h1 {
     font-size: 2rem;
   }
+  &__txt {
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: 70%;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin: 1rem 1rem;
+
+    border-radius: 5px;
+  }
 }
 
 span {

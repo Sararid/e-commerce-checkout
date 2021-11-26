@@ -58,6 +58,17 @@ const Payment = () => {
             <div className="containerPay">
                 <form className="containerPay__form" onSubmit={handleSubmit}>
                     <div className="containerPay__name">
+                        <button>
+                            PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
+                        </button>
+                        <div className="paywithcard">
+                            <div>______</div> <h1>OR </h1>
+                            <div>______</div>
+                        </div>
+                        <div className="paywithcard__txt">
+                            PAY WITH CARD <FaCcVisa style={{ fontSize: "30px", paddingRight: "6px" }} />
+                            <FaCcMastercard style={{ fontSize: "30px", paddingRight: "6px" }} />
+                        </div>
                         <label htmlFor="name">Email</label>
                         <input
                             type="text"
@@ -74,19 +85,6 @@ const Payment = () => {
                         >
                             {errorMessage}
                         </span>
-
-                        <button>
-                            PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
-                        </button>
-                        <div className="paywithcard">
-                            <div>______</div> <h1>OR</h1>
-                            <div>______</div>
-                        </div>
-                        <button>
-                            PAY WITH CARD <FaCcVisa style={{ fontSize: "30px", paddingRight: "6px" }} />
-                            <FaCcMastercard style={{ fontSize: "30px", paddingRight: "6px" }} />
-                        </button>
-
                         <label htmlFor="name">Name on Card</label>
                         <input
                             type="text"
