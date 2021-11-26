@@ -11,6 +11,7 @@
     align-items: center;
   }
   &__card {
+    width: 10rem;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -19,9 +20,9 @@
   &__subcard {
     display: flex;
     flex-direction: column;
-    border: 1px solid honeydew;
-    border-radius: 20px;
-    background-color: honeydew;
+    align-items: center;
+
+    width: 50%;
   }
   &__image {
     width: 200px;
@@ -53,11 +54,15 @@
   &__price {
     font-weight: bold;
     padding: 0 2rem;
+    @media all and (min-width: 1200px) {
+      padding: 0;
+    }
   }
 
   &__description {
     color: $darkBlue;
     padding: 0 2rem;
+    text-align: center;
   }
   &__category {
     color: $orange;
@@ -69,21 +74,9 @@
     }
   }
   &__btn {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
-    height: 40px;
-    font-weight: bold;
-    font-size: 1rem;
+    @include buttonStyle;
     margin: 0.5rem 0;
     margin-right: 3px;
-  }
-  &__btn:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
   }
 }
 

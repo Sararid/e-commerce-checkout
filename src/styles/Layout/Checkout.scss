@@ -1,4 +1,5 @@
 @import "../Variables.scss";
+@import "../Mixins.scss";
 
 .container {
   @media all and (min-width: 768px) {
@@ -15,13 +16,7 @@
   align-items: center;
 
   &__btn {
-    border: none;
-    color: white;
-    background-color: black;
-    width: 200px;
-    height: 40px;
-    font-weight: bold;
-    border-radius: 5px;
+    @include buttonStyle;
     @media all and (min-width: 768px) {
       width: 300px;
     }

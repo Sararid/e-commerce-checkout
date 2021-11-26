@@ -74,17 +74,7 @@
         font-weight: bold;
       }
       button {
-        border: none;
-        color: white;
-        background-color: black;
-        width: 150px;
-        height: 40px;
-        font-weight: bold;
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-        margin: 1rem 1rem;
-
-        border-radius: 5px;
+        @include buttonStyle;
         @media all and (min-width: 768px) {
           font-size: 1.2rem;
           width: 190px;
@@ -109,7 +99,7 @@
       }
       button {
         border: none;
-        width: 40px;
+        width: 50px;
         background-color: transparent;
         border-radius: 3px;
       }
@@ -121,7 +111,7 @@
       }
     }
     &--icon {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
   }
   &__title {
@@ -134,10 +124,8 @@
     }
   }
   &__btn {
-    width: 140px;
+    @include buttonStyle;
     height: 50px;
-    border: none;
-    background-color: black;
-    color: white;
+    width: 200px;
   }
 }

@@ -1,3 +1,5 @@
+@import "../Mixins.scss";
+
 .containerPay {
   margin-top: 2rem;
   display: flex;
@@ -34,15 +36,8 @@
     }
     button {
       margin-top: 1rem;
-      border: none;
-      color: white;
-      background-color: black;
-      margin-bottom: 2rem;
-      height: 40px;
-      font-weight: bold;
+      @include buttonStyle;
       width: 70%;
-      border-radius: 4px;
-      cursor: pointer;
     }
   }
 
@@ -63,19 +58,8 @@
     width: 70%;
 
     button {
-      border: none;
-      color: white;
-      background-color: black;
-      margin-bottom: 2rem;
-      height: 40px;
-      font-weight: bold;
+      @include buttonStyle;
       width: 100%;
-      border-radius: 4px;
-    }
-    button:hover {
-      background-color: white;
-      color: black;
-      cursor: pointer;
     }
   }
 }

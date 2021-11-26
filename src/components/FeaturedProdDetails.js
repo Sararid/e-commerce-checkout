@@ -7,7 +7,7 @@ import { ProductsContext } from "../context/products-context";
 import { CartContext } from "../context/cart-context";
 import { isInCart } from "./pages/Cart";
 import "../../src/styles/Layout/Featured.scss";
-
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
     const { productId } = useParams();
@@ -57,9 +57,7 @@ const ProductDetails = () => {
                         <p className="singleProduct__description"> {description}</p>
                         <p>{data.description} </p>
                         {
-                            // we check fist if product is in cart, if not we add it to cart with the reducer addProduct
                             !isInCart(product, cartItems) && (
-                                //if item is not in cart we display the add button
                                 <button
                                     className="singleProduct__btn"
                                     onClick={() => addProduct(product)}
@@ -77,7 +75,7 @@ const ProductDetails = () => {
                                 Add more
                             </button>
                         )}
-                        <button className="singleProduct__btn">Checkout</button>
+                        <Link to="/cart">    <button className="singleProduct__btn">Go to Cart</button></Link>
                     </div>
                 </li>
             )}

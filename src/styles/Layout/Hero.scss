@@ -1,4 +1,5 @@
 @import "../Variables.scss";
+@import "../Mixins.scss";
 .hero {
   height: 60vh;
   position: relative;
@@ -26,14 +27,7 @@
       }
     }
     &--btn {
-      border: none;
-      color: white;
-      background-color: orange;
-      width: 150px;
-      height: 40px;
-      font-weight: bold;
-      font-size: 1rem;
-      letter-spacing: 4px;
+      @include buttonStyle;
       @media all and (min-width: 768px) {
         font-size: 1.5rem;
         width: 180px;

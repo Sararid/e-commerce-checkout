@@ -10,7 +10,6 @@ const CartTotal = ({ itemCount, total, clearCart }) => {
             <p>Total items: {itemCount}</p>
             <p>{`Total: €${total}`}</p>
 
-
             <Link to='/checkout'><button>CHECKOUT</button></Link>
             <button onClick={() => clearCart()}>CLEAR CART </button>
 
