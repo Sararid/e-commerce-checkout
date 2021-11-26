@@ -4,7 +4,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { CartContext } from "../../context/cart-context";
 import CartItem from "./Cartitem";
 import CartTotal from "./CartTotal";
-import '../../styles/Layout/Cart.scss'
+import "../../styles/Layout/Cart.scss";
 import { Link } from "react-router-dom";
 export const isInCart = (product, cartItems) => {
     return cartItems.find((item) => item.id === product.id);
@@ -23,26 +23,30 @@ const Cart = () => {
 
     const addRemove = { increase, decrease, removeProduct };
     return (
-
-
-        <section >
+        <section>
             <div className="cart__title">
-                <Link to='/shop'>  <button className='cart__btn'>
-                    <AiOutlineArrowLeft />
-                    Back to Shop
-                </button></Link>
+                <Link to="/shop">
+                    {" "}
+                    <button className="cart__btn">
+                        <AiOutlineArrowLeft />
+                        Back to Shop
+                    </button>
+                </Link>
                 <h1>CART </h1>
             </div>
             <section className="cart">
                 {cartItems.length === 0 ? (
-                    <div className="cart__container"> <h2> Your Cart is empty</h2></div>
+                    <div className="cart__container">
+                        {" "}
+                        <h2> Your Cart is empty</h2>
+                    </div>
                 ) : (
                     <>
                         <div className="cart__container">
                             {
                                 cartItems.map((item) => (
                                     <CartItem {...item} key={item.id} {...addRemove} />
-                                )) // it will spread out in the componetn cartiem thanks to thr props
+                                ))
                             }
                         </div>
                         <CartTotal
@@ -51,7 +55,8 @@ const Cart = () => {
                             clearCart={clearCart}
                         />
                     </>
-                )} </section>
+                )}{" "}
+            </section>
         </section>
     );
 };

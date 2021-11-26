@@ -38,34 +38,23 @@ const ProductDetails = () => {
                 <Spinner animation="border" />
             ) : (
                 <li key={id} id={id} className="singleProduct">
-                    < div className="singleProduct__card">
-                        <img
-                            className="singleProduct__image"
-                            src={image}
-                            alt={title}
-
-                        />
-
-
+                    <div className="singleProduct__card">
+                        <img className="singleProduct__image" src={image} alt={title} />
                     </div>
-                    <div className="singleProduct__subcard" >
+                    <div className="singleProduct__subcard">
                         <h1 className="singleProduct__title">{title}</h1>
-
                         <span className="singleProduct__subtitle"> {category} </span>
-
                         <span className="singleProduct__price"> € {price}</span>
                         <p className="singleProduct__description"> {description}</p>
                         <p>{data.description} </p>
-                        {
-                            !isInCart(product, cartItems) && (
-                                <button
-                                    className="singleProduct__btn"
-                                    onClick={() => addProduct(product)}
-                                >
-                                    Add to cart
-                                </button>
-                            )
-                        }
+                        {!isInCart(product, cartItems) && (
+                            <button
+                                className="singleProduct__btn"
+                                onClick={() => addProduct(product)}
+                            >
+                                Add to cart
+                            </button>
+                        )}
                         {isInCart(product, cartItems) && (
                             //if item is not in cart we display the add button
                             <button
@@ -75,7 +64,10 @@ const ProductDetails = () => {
                                 Add more
                             </button>
                         )}
-                        <Link to="/cart">    <button className="singleProduct__btn">Go to Cart</button></Link>
+                        <Link to="/cart">
+                            {" "}
+                            <button className="singleProduct__btn">Go to Cart</button>
+                        </Link>
                     </div>
                 </li>
             )}

@@ -12,38 +12,53 @@
   &__container {
     @include flexColumnWrap;
     align-items: center;
-    margin: 2rem;
+
+    @media all and(min-width: 768px) {
+      margin: 2rem;
+    }
     &--img {
       height: 20vh;
+      width: 189px;
       padding: 1rem;
       @media all and (min-width: 768px) {
         height: 30vh;
         padding: 3rem;
+        width: 200px;
       }
       @media all and (min-width: 1200px) {
         width: 50%;
       }
     }
     &--card {
-      display: flex;
-      border: solid 1px $GrayishBlue;
-      border-radius: 2px;
-      padding: 0 1rem;
-      //margin: 0 4rem;
-      align-items: center;
+      // display: flex;
+      // border: solid 1px $GrayishBlue;
+      // border-radius: 2px;
+      // padding: 0 1rem;
+      // //  margin: 0 4rem;
+      // align-items: center;
+
+      @include flexColumnCenter;
+      border: solid 1px #b6bcc8;
+      border-radius: 20px;
+
+      padding: 1rem 1rem;
+      max-width: 189px;
+      margin: 1rem 0;
       @media all and (min-width: 465px) {
         margin: 1rem;
       }
       @media all and (min-width: 768px) {
         margin: 1rem 2rem;
+        margin-left: 5rem;
         max-width: 546px;
+        @include flexRowCenter;
       }
       @media all and (min-width: 900px) {
         margin: 1rem 2rem;
         max-width: 620px;
       }
       h2 {
-        font-size: 0.8rem;
+        font-size: 1rem;
         @media all and (min-width: 768px) {
           font-size: 1rem;
         }
@@ -56,7 +71,7 @@
 
       h3,
       p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         @media all and (min-width: 768px) {
           font-size: 1rem;
         }
@@ -85,18 +100,22 @@
       @include flexColumnCenter;
 
       h3 {
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: center;
         @media all and (min-width: 768px) {
           font-size: 1rem;
         }
       }
       button {
+        width: 30px;
         border: none;
-        width: 50px;
+
         background-color: transparent;
         border-radius: 3px;
         cursor: pointer;
+        @media all and( min-width: 768px) {
+          width: 50px;
+        }
       }
 
       div {

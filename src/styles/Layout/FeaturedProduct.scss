@@ -2,22 +2,29 @@
 @import "../Mixins.scss";
 
 .singleProduct {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 1rem 0;
   width: 90%;
   margin: 20px;
-  display: flex;
-  flex-direction: column;
-  @media all and(min-width: 560px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  @include flexColumnCenter;
+
   &__card {
-    width: 10rem;
+    width: 100%;
     @include flexColumnCenter;
-    align-content: space-around;
+    @media all and (min-width: 768px) {
+      width: 10rem;
+      align-content: space-around;
+    }
+  }
+  &__title {
+    font-size: 1rem;
   }
   &__subcard {
-    @include flexColumnCenter;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
   }
   &__image {
     width: 200px;
@@ -48,10 +55,6 @@
   }
   &__price {
     font-weight: bold;
-    padding: 0 2rem;
-    @media all and (min-width: 1200px) {
-      padding: 0;
-    }
   }
 
   &__description {
