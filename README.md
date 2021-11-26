@@ -6,11 +6,11 @@
 
 # Proyecto
 
-El proyecto consiste en crear una pasarela de pago sencilla que permite al usuario tener una experiencia cómoda a la hora de realizar el pago. El proyecto tmabién contiene una web de comercio simple que permite al usuario seleccional un producto y su cantidad antes de proceder a la pasarela de pago.
+El proyecto consiste en crear una pasarela de pago sencilla que permite al usuario tener una experiencia cómoda a la hora de realizar el pago. El proyecto también contiene una web de comercio simple que permite al usuario seleccionar un producto y su cantidad antes de proceder a la pasarela de pago.
 
 ## Background
 
-Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIGITAL 2021. He podido reeforzar con este ejercicio mis conocimientos de maquetación (HTML5/CSS3/SASS), javascript y ReactJS, y el uso de APIS externas. Con este proyecto tmabién he aprendido por primera vez el uso de useContext (parecido a redux), hook de React que me perimite compartir y crear variables globales con diferentes componentes de mi aplicación.
+Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIGITAL 2021. He podido reeforzar con este ejercicio mis conocimientos de maquetación (HTML5/CSS3/SASS/MIXINS/BEM), JavaScript y ReactJS, y el uso de APIS externas. Con este proyecto tmabién he aprendido por primera vez el uso de **useContext** (parecido a redux), hook de React que me permite compartir y crear variables globales con diferentes componentes de mi aplicación.
 
 # Objetivos principales y historias
 
@@ -27,6 +27,7 @@ Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIG
 ## Stack
 
 ![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+: estructura de componentes más eficiente y uso de router así hooks tales como useContext, useEffect o useState, etc
 
 ![](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
@@ -36,11 +37,12 @@ Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIG
 : Maquetación de la web
 
 ![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 : Dar estilos a la página web
 
+![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 ![](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-: Framework de css para facilitar la utilización de CSS y hacerlo de manera más práctica. También he utilizado los **mixins** y **variables** para mejorar el código y hacerlo más eficiente.
+: Framework de css para facilitar la utilización de css3 y hacerlo de manera más práctica. También he utilizado los **mixins** y **variables** para mejorar el código y hacerlo más eficiente. He utilizado Flex para diseñar algunos layouts y react bootstrap para la construir por ejemplo el hero.
 
 ![](https://img.shields.io/badge/gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
 : Sistema de compilación de transmisión en el desarrollo web front-end.
