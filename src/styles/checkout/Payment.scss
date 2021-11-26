@@ -68,6 +68,7 @@ input {
   margin-bottom: 20px;
   padding: 12px;
   border: 1px solid #ccc;
+  box-shadow: 3px 3px $GrayishBlue;
   border-radius: 3px;
 }
 input::placeholder {
@@ -82,6 +83,7 @@ label {
   margin-bottom: 20px;
   padding: 12px;
   border: 1px solid #ccc;
+  box-shadow: 3px 3px $GrayishBlue;
   border-radius: 3px;
 }
 

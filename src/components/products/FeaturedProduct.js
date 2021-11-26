@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Layout/FeaturedProduct.scss";
-import { useContext } from "react";
-import { CartContext } from "../context/cart-context";
-import { isInCart } from "./pages/Cart";
-import "../../src/styles/Layout/Featured.scss";
+import "../../styles/products/FeaturedProduct.scss"
+import "../../styles/products/Featured.scss";
+import { CartContext } from "../../context/cart-context";
+import { isInCart } from "../cart/Cart";
+
 
 const FeaturedProduct = (props) => {
     const { title, image, price, id, description, category } = props;

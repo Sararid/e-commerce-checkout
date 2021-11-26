@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import { ProductsContext } from '../context/products-context';
+import { ProductsContext } from '../../context/products-context';
 import FeaturedProduct from './FeaturedProduct';
-import '../styles/Layout/Featured.scss';
-
-import '../../src/styles/Layout/FeaturedProduct.scss'
+import '../../styles/products/FeaturedProduct.scss';
+import '../../styles/products/Featured.scss';
 
 const FeauturedCollection = () => {
     const { data } = useContext(ProductsContext);

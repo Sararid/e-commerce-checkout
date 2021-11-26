@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
-import { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
-import { ProductsContext } from "../context/products-context";
-import { CartContext } from "../context/cart-context";
-import { isInCart } from "./pages/Cart";
-import "../../src/styles/Layout/Featured.scss";
+import { ProductsContext } from "../../context/products-context";
+import { CartContext } from "../../context/cart-context";
+import { isInCart } from "../cart/Cart";
 import { Link } from "react-router-dom";
+import '../../styles/products/Featured.scss';
 
 const ProductDetails = () => {
     const { productId } = useParams();
@@ -26,9 +25,7 @@ const ProductDetails = () => {
 
     useEffect(() => {
         if (productId && productId !== "") fetchProductDetails();
-        return () => {
-            console.log("eroor");
-        };
+
     }, [productId]);
 
     const { id, title, price, category, image, description } = product;
@@ -56,7 +53,7 @@ const ProductDetails = () => {
                             </button>
                         )}
                         {isInCart(product, cartItems) && (
-                            //if item is not in cart we display the add button
+
                             <button
                                 className="singleProduct__btn"
                                 onClick={() => increase(product)}

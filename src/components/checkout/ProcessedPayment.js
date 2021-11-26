@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Layout/ProcessPayment.scss';
+import '../../styles/checkout/ProcessPayment.scss';
 import { useHistory } from 'react-router-dom';
 import { useEffect, useContext } from 'react';
 import { CartContext } from '../../context/cart-context';
@@ -19,7 +19,7 @@ const ProcessedPayment = () => {
                 will send you a confirmation email shortly
             </p>
             <div>
-                <button
+                <button className="processpay__btn"
                     onClick={() => history.push('/shop')}>
                     Continue Shopping
                 </button>

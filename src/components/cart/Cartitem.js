@@ -2,7 +2,7 @@ import React from "react";
 import { BsPlusCircle } from "react-icons/bs";
 import { FiTrash } from "react-icons/fi";
 import { BiMinusCircle } from "react-icons/bi";
-import { Card } from "react-bootstrap";
+
 
 export const isInCart = (product, cartItems) => {
     return cartItems.find((item) => item.id === product.id);

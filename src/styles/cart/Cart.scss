@@ -30,15 +30,9 @@
       }
     }
     &--card {
-      // display: flex;
-      // border: solid 1px $GrayishBlue;
-      // border-radius: 2px;
-      // padding: 0 1rem;
-      // //  margin: 0 4rem;
-      // align-items: center;
-
       @include flexColumnCenter;
       border: solid 1px #b6bcc8;
+      box-shadow: 5px 5px $GrayishBlue;
       border-radius: 20px;
 
       padding: 1rem 1rem;

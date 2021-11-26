@@ -1,24 +1,18 @@
-// Fichero src/components/App.js
-
 import "../styles/App.scss";
-
 import { Switch, Route } from "react-router-dom";
-//layout components
-import Header from "./Header";
-import Hero from "./Hero";
-import Main from "./Main";
-import Footer from "./Footer";
-import FeauturedCollection from "./FeauturedCollection";
-import FeaturedProdDetails from './FeaturedProdDetails';
-import NotFound from "./pages/NotFound";
-import Shop from './pages/Shop';
-import Cart from "./pages/Cart";
+import Header from "./layout/Header";
+import Hero from "./layout/Hero";
+import Main from "./layout/Main";
+import Footer from "./layout/Footer";
+import FeauturedCollection from "./products/FeauturedCollection";
+import FeaturedProdDetails from './products/FeaturedProdDetails';
+import NotFound from "./layout/NotFound";
+import Shop from './cart/Shop';
+import Cart from "./cart/Cart";
 import Checkout from "./checkout/Checkout";
 import ProcessedPayment from "./checkout/ProcessedPayment";
 
 function App() {
-
-
   return (
     <>
 

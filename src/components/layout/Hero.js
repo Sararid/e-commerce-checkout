@@ -1,9 +1,9 @@
-import "../styles/Layout/Hero.scss";
+import "../../styles/Layout/Hero.scss";
 import { Link } from "react-router-dom";
 import { Carousel, Button } from "react-bootstrap";
-import hero from '../images/jeans5.jpg'
-import hero2 from '../images/sweater.jpg'
-import hero3 from '../images/jeans3.jpg'
+import hero from '../../images/jeans5.jpg'
+import hero2 from '../../images/sweater.jpg'
+import hero3 from '../../images/jeans3.jpg'
 const Hero = () => {
     return (
         <>

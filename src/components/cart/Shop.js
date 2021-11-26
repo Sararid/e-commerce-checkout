@@ -1,6 +1,6 @@
 import React from 'react';
-import FeaturedProduct from '../FeaturedProduct';
-import '../../styles/Layout/Featured.scss';
+import FeaturedProduct from '../products/FeaturedProduct';
+import '../../styles/products/Featured.scss';
 
 import { ProductsContext } from '../../context/products-context';
 

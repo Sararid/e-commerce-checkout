@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../context/cart-context";
-import "../../styles/Layout/Checkout.scss";
+import "../../styles/checkout/Checkout.scss";
+import "../../styles/checkout/Payment.scss";
 import CountriesDropDown from "./CountriesDropDown";
 import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
-import "../../styles/Layout/Payment.scss";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import { CgPaypal } from "react-icons/cg";
+
 const Payment = () => {
     const history = useHistory();
     const { total } = useContext(CartContext);

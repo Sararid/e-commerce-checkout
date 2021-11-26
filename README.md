@@ -100,40 +100,58 @@ También en lugar de clonar el repositorio, lo puedes descargar cómodamente en 
 
 ## Estructura de carpetas
 
+Aquí pueden encontrar una explicación de la estructura del proyecto.
+
 ```
 src
  ├─ components // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
  |  ├─checkout
- |    └─components
- |  ├─pages
- |    └─components
- |  ├─core
+ |    └─Checkout.js
+ |    └─CountriesDropDown.js //fichero dónde se hace la llamada al api e integración de esta data en el select input.
+ |    └─Payment.js //fichero dónde se encuentra el formulario de la pasarela de pago con todos los campos a rellanar por el usuario.
+ |    └─ProcessedPayment.js // Fichero dónde se encuentre la página de pago realizado con éxito al que el usuario accede una vez rellenada la pasarela de pago correctamente.
+ |  ├─cart
+ |    └─Cart.js
+ |    └─CartItem.js
+ |    └─CartTotal.js
  |  ├─layout
- |  └─pages
- ├─ context
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- ├─ context
- |  ├─ cart-context.js
- |  ├─ cart-reducers.js
- |  ├─ products-context.js
- ├─ images
- ├─service
- |  ├─ api.js
- ├─astyles
- |  ├─ layout
- |    └─ pages
-      └─ pages
-      └─ pages
-    ├─ pages
-      └─ NotFound.scss
-    ├─ App.scss
-    ├─ Mixins.scss
-    ├─ Variables.scss
-
-
+ |    └─Header.js
+ |    └─Footer.js
+ |    └─Hero.js
+ |    └─Main.js
+ |    └─NotFound.js
+ |  ├─ products //carpeta que contiene los componentes que renderizan los productos en la página principal y en /shop , y de manera individual.
+ |    └─FeaturesdProdDetail.js
+ |    └─FeaturedProduct.js
+ |    └─FeaturedCollection.js
+ |  ├─ App.js // fichero principal donde renderizo todos los componentes creados
+ |  ├─ context
+ |     └─cart-context.js
+ |     └─cart-reducers.js
+ |     └─products-context.js
+ |  ├─ images
+ |  ├─service //carpeta dónde se encuentra el api que utilizo para buscar los datos de todos los países y así pintarlos en el campo del formulario de la pasarela de pago.
+ |     └─api.js
+ |  ├─styles
+ |   ├─Layout
+ |     └─Header.scss
+ |     └─Footer.scss
+ |     └─Hero.scss
+ |     └─Main.scss
+ |     └─NotFound.scss
+ |   ├─cart
+ |     └─Cart.scss
+ |   ├─checkout
+ |     └─Checkout.scss
+ |     └─Payment.scss
+ |     └─ProcessPayment.scss
+ |   ├─products
+ |     └─Featured.scss
+ |       └─FeaturedProduct.scss
+ |   ├─ App.scss
+ |   ├─ Mixins.scss
+ |   ├─ Variables.scss
+ |   ├─ index.js
 
 
 ```

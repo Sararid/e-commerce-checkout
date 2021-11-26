@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import { Card } from "react-bootstrap";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { CartContext } from "../../context/cart-context";
 import CartItem from "./Cartitem";
 import CartTotal from "./CartTotal";
-import "../../styles/Layout/Cart.scss";
+import "../../styles/cart/Cart.scss";
 import { Link } from "react-router-dom";
 export const isInCart = (product, cartItems) => {
     return cartItems.find((item) => item.id === product.id);

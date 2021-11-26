@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import "../../styles/Layout/Payment.scss";
+import "../../styles/checkout/Payment.scss";
 import api from "../../service/api";
 import { useEffect } from "react";
 
 const CountriesDropDown = () => {
     const [data, setData] = useState([]);
-    // call to API
     useEffect(() => {
         api().then((data) => {
             setData(data);
@@ -23,7 +22,6 @@ const CountriesDropDown = () => {
                 className="input_country"
             >
                 <option value="">Select a Country</option> {nameCountry}
-
             </select>
         </>
     );

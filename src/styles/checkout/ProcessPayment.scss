@@ -5,4 +5,9 @@
   @include flexColumnCenter;
   justify-content: space-around;
   text-align: center;
+  &__btn {
+    @include buttonStyle;
+    height: 60px;
+    width: 180px;
+  }
 }

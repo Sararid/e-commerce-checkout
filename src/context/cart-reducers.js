@@ -5,7 +5,7 @@ const storeCartItems = (cartItems) => {
 
 export const sumItems = cartItems => {
     storeCartItems(cartItems);
-    return { //we return an object 
+    return {
         itemCount: cartItems.reduce((total, prod) => total + prod.quantity, 0),
         total: cartItems.reduce((total, prod) => total + parseInt(prod.price * prod.quantity), 0)
     }
@@ -14,27 +14,27 @@ export const sumItems = cartItems => {
 const cartReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_ITEM':
-            // check if item is in cart
+
             if (!state.cartItems.find(item => item.id === action.payload.id)) {
                 state.cartItems.push({
                     ...action.payload,
-                    quantity: 1, //we need a new property whihch is qty
+                    quantity: 1,
                 })
             }
 
             return {
-                ...state, //return the old state 
-                cartItems: [...state.cartItems], //add the current state 
+                ...state,
+                cartItems: [...state.cartItems],
                 ...sumItems(state.cartItems)
             }
         case 'INCREASE':
-            const increaseIndex = state.cartItems.findIndex(item => item.id === action.payload.id); //we return the item which index matches 
+            const increaseIndex = state.cartItems.findIndex(item => item.id === action.payload.id);
             state.cartItems[increaseIndex].quantity++;
 
             return {
                 ...state,
                 cartItems: [...state.cartItems],
-                ...sumItems(state.cartItems), //we spread out the context of the new sum object
+                ...sumItems(state.cartItems),
             }
         case 'DECREASE':
             const decreaseIndex = state.cartItems.findIndex(item => item.id === action.payload.id);

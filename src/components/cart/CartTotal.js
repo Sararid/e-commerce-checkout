@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import '../../styles/Layout/Cart.scss';
+import '../../styles/cart/Cart.scss';
 
 const CartTotal = ({ itemCount, total, clearCart }) => {
     return (

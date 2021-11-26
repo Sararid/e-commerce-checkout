@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/Layout/Main.scss'
-import hero from '../images/hero_1 (4).jpg';
+import '../../styles/Layout/Main.scss'
+import hero from '../../images/hero_1 (4).jpg';
 import { Link } from 'react-router-dom';
 
 const Main = () => {
