@@ -20,11 +20,11 @@ Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIG
 
 2. uso de Apis de terceros para rellenar los campos de un formulario
 
-[x] Task 1 → Puedo ver correctamente la vista de PC
-[x] Task 2 → Puedo ver correctamente la vista de móvil
-[x] Task 3 → Si introduzco un campo que no corresponde con un patrón de tarjeta de crédito salta un error
-[x] Task 4 → Si introduzco un email que no corresponde con patrón de correo electrónico salta un error de aviso
-[x] Task 5 → Puedo seleccionar ver la lista de países completa
+- [x] Task 1 → Puedo ver correctamente la vista de PC
+- [x] Task 2 → Puedo ver correctamente la vista de móvil
+- [x] Task 3 → Si introduzco un campo que no corresponde con un patrón de tarjeta de crédito salta un error
+- [x] Task 4 → Si introduzco un email que no corresponde con patrón de correo electrónico salta un error de aviso
+- [x] Task 5 → Puedo seleccionar ver la lista de países completa
 
 ## Stack
 
