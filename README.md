@@ -28,16 +28,18 @@ Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIG
 
 ## Stack
 
-![](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react) y ![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
+![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 : Maquetación de la web
 
-![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) y ![](https://img.shields.io/badge/-react%20Boostrap-orange)
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/-react%20Boostrap-orange)
 : Dar estilos a la página web
 
 ![](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-: Framework CSS para facilitar la utilización de CSS y hacerlo de manera más práctica.
+: Framework CSS para facilitar la utilización de CSS y hacerlo de manera más práctica. También he utilizado los mixins y variables para mejorar el código y hacerlo más eficiente.
 
 ![](https://img.shields.io/badge/gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
 : Sistema de compilación de transmisión en el desarrollo web front-end.
@@ -100,26 +102,47 @@ También en lugar de clonar el repositorio, lo puedes descargar cómodamente en 
 
 ```
 src
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ 01.variables.js
- |  ├─02-fetch.js
- |  └─ ... .js
- ├─ scss
+ ├─ components // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
+ |  ├─checkout
+ |    └─components
+ |  ├─pages
+ |    └─components
+ |  ├─core
+ |  ├─layout
+ |  └─pages
+ ├─ context
  |  ├─ components
  |  ├─ core
  |  ├─ layout
  |  └─ pages
- └─ html
-    └─ partials
+ ├─ context
+ |  ├─ cart-context.js
+ |  ├─ cart-reducers.js
+ |  ├─ products-context.js
+ ├─ images
+ ├─service
+ |  ├─ api.js
+ ├─astyles
+ |  ├─ layout
+ |    └─ pages
+      └─ pages
+      └─ pages
+    ├─ pages
+      └─ NotFound.scss
+    ├─ App.scss
+    ├─ Mixins.scss
+    ├─ Variables.scss
+
+
+
+
 ```
 
 ## Contact info
 
-<p align="left">
-<a href="https://twitter.com/sara_rid" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="sara_rid" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/www.linkedin.com/in/sara-rd/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/sara-rd/" height="30" width="40" /></a>
-
-</p>
+<a href="mailto:sarayridouane@gmail.com"><img src="https://img.icons8.com/color/35/000000/gmail.png" alt="email"/></a>
+<a href="https://www.linkedin.com/in/sara-rd"><img src="https://img.icons8.com/color/35/000000/linkedin.png" alt="linkedin"/></a>
+<a href="https://twitter.com/sara_rid" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="sara_rid" height="30" width="40" /></a>
 
 ## License
 
