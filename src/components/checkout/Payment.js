@@ -1,16 +1,19 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../context/cart-context";
 import "../../styles/Layout/Checkout.scss";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import CountriesDropDown from "./CountriesDropDown";
 import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
 import "../../styles/Layout/Payment.scss";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
+import { useHistory } from "react-router-dom";
 
 const Payment = () => {
+    const history = useHistory();
     const { total } = useContext(CartContext);
     const [errorMessage, setErrorMessage] = useState('');
     const [errorCard, setErrorCard] = useState('');
+    const [errorForm, setErrorForm] = useState('');
     const [state, setState] = useState({
         email: "",
         name: "",
@@ -21,27 +24,42 @@ const Payment = () => {
     });
 
     const handleValidation = () => {
-
         if (!state.email || !state.email.includes('@')) {
             setErrorMessage('Please enter valid email!')
         } else {
             setErrorMessage('')
         }
-
         if (!state.number || state.number.match(/^[a-zA-Z]+$/)) {
             setErrorCard('Please enter valid card number!')
         } else if (state.number.length < 16) {
             setErrorCard('Please enter valid card 16 digit number!')
         } else {
             setErrorCard('')
-        }
+        } if (state.email && state.name && state.number && state.dates && state.cvc) {
+
+            history.push("/payment-success")
+
+        } else {
+            setErrorForm('Please complete all fields, before proceding to payment')
+        };
 
     }
+    const isFormValid = () => {
+
+        const { email, name, number, dates, cvc } = state
+
+        if (email && name && number && dates && cvc) {
+
+            history.push("/payment-success")
+
+        };
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
+    }
 
-    };
 
     const handleInputs = (e) => {
         setState({
@@ -139,9 +157,12 @@ const Payment = () => {
                     {" "}
 
                     {" "}
-                    <Link to="/payment-success"></Link>
+                    <span style={{
+                        fontWeight: 'bold',
+                        color: 'red',
+                    }}>{errorForm}</span>
 
-                    <button onClick={handleValidation} >{`Pay: €${total}`} </button>
+                    <button onClick={handleValidation} > {`Pay: €${total}`}  </button>
 
                 </div>{" "}
             </div>

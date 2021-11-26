@@ -21,7 +21,7 @@ const ProductsContextProvider = ({ children }) => {
                                 id: item.id,
                                 title: item.title,
                                 description: item.description,
-                                price: item.price,
+                                price: parseInt(item.price),
                                 image: item.image,
                                 category: item.category
                             }

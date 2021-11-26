@@ -7,7 +7,7 @@ export const sumItems = cartItems => {
     storeCartItems(cartItems);
     return { //we return an object 
         itemCount: cartItems.reduce((total, prod) => total + prod.quantity, 0),
-        total: cartItems.reduce((total, prod) => total + (prod.price * prod.quantity), 0)
+        total: cartItems.reduce((total, prod) => total + parseInt(prod.price * prod.quantity), 0)
     }
 }
 

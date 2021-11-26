@@ -1,14 +1,29 @@
 import React from 'react';
 import '../../styles/Layout/ProcessPayment.scss';
-
+import { useHistory } from 'react-router-dom';
+import { useEffect, useContext } from 'react';
+import { CartContext } from '../../context/cart-context';
 const ProcessedPayment = () => {
-
+    const history = useHistory();
+    const { clearCart, cartItems } = useContext(CartContext);
+    useEffect(() => {
+        if (cartItems.length !== 0) { clearCart() }
+    }, [clearCart, cartItems]);
 
     return (
         <div className="processpay">
 
-            <h1 className="processpay__title"> Payment was processed successfully</h1>
+            <h1 className="processpay__title"> Thank you for your order</h1>
 
+            <p>We are currently processing your order and
+                will send you a confirmation email shortly
+            </p>
+            <div>
+                <button
+                    onClick={() => history.push('/shop')}>
+                    Continue Shopping
+                </button>
+            </div>
         </div>
     )
 }
