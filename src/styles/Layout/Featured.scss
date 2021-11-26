@@ -15,6 +15,9 @@
       align-items: center;
       margin: 4rem;
     }
+    @media all and (min-width: 1400px) {
+      justify-content: space-evenly;
+    }
   }
 
   &__btn {

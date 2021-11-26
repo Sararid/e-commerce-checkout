@@ -8,25 +8,36 @@ export const isInCart = (product, cartItems) => {
     return cartItems.find((item) => item.id === product.id);
 };
 const Cart = (props) => {
-
-    const { title, image, price, quantity, id, description, increase, decrease, removeProduct } = props;
-    const product = { title, image, price, quantity, id, description }
+    const {
+        title,
+        image,
+        price,
+        quantity,
+        id,
+        description,
+        increase,
+        decrease,
+        removeProduct,
+    } = props;
+    const product = { title, image, price, quantity, id, description };
     return (
-
         <>
-            <div className="cart__container--card"> <img src={image}
-                alt={title} className="cart__container--img" />
-
-                <div className="cart__container--title">   <h2> {title} </h2>    <h3>€{price}</h3></div>
-
-                <div className="cart__container--qty" ><h3> Quantity: {quantity}</h3>
-                    <div >  <button onClick={() => increase(product)}>
-
-                        <BsPlusCircle className="cart__container--icon" />
-                    </button>
+            <div className="cart__container--card">
+                <h2> {title} </h2>
+                <img src={image} alt={title} className="cart__container--img" />
+                <div className="cart__container--title">
+                    {" "}
+                    <h3>€{price}</h3>
+                </div>
+                <div className="cart__container--qty">
+                    <h3> Quantity: {quantity}</h3>
+                    <div>
+                        {" "}
+                        <button onClick={() => increase(product)}>
+                            <BsPlusCircle className="cart__container--icon" />
+                        </button>
                         {quantity === 1 && (
                             <button onClick={() => removeProduct(product)}>
-
                                 <FiTrash className="cart__container--icon" />
                             </button>
                         )}
@@ -35,13 +46,10 @@ const Cart = (props) => {
                                 <BiMinusCircle className="cart__container--icon" />{" "}
                             </button>
                         )}
-                    </div> </div></div></>
-
-
-
-
-
-
+                    </div>{" "}
+                </div>
+            </div>
+        </>
     );
 };
 

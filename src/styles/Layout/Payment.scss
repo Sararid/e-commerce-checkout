@@ -2,10 +2,9 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   @media all and (min-width: 768px) {
-    margin-top: 5rem;
+    margin-top: 0;
   }
 
   &__form {
@@ -15,6 +14,9 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100vw;
+    @media all and (min-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__name {
@@ -30,30 +32,24 @@
     @media all and (min-width: 768px) {
       margin: 2rem 0;
     }
-  }
-  &__card {
-    display: flex;
-    align-items: center;
-    border: solid 1px grey;
-    justify-content: space-between;
-    padding: 2px;
-    width: 50%;
-    input {
+    button {
+      margin-top: 1rem;
       border: none;
+      color: white;
+      background-color: black;
+      margin-bottom: 2rem;
+      height: 40px;
+      font-weight: bold;
+      width: 70%;
+      border-radius: 4px;
+      cursor: pointer;
     }
   }
 
   &__date {
     display: flex;
     align-items: center;
-    border: solid 1px grey;
-    padding: 2px;
-    border-radius: 4px;
-    height: 40px;
-    width: 50%;
-    input {
-      border: none;
-    }
+    width: 70%;
   }
 
   &__country {
@@ -62,14 +58,9 @@
     flex-direction: column;
     margin: 2rem 0;
     align-items: center;
-
-    label {
-      font-weight: bold;
-      padding-bottom: 1rem;
-    }
   }
   &__btn {
-    width: 50%;
+    width: 70%;
 
     button {
       border: none;
@@ -84,22 +75,33 @@
     button:hover {
       background-color: white;
       color: black;
+      cursor: pointer;
     }
   }
 }
 
 input {
-  width: 50%;
-  border-radius: 4px;
-  height: 40px;
-  border: solid 1px grey;
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 input::placeholder {
-  padding-left: 3px;
+  padding-left: 4px;
+}
+label {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.input_country {
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-.input_country {
-  border-radius: 4px;
-  height: 40px;
-  width: 50%;
+.paywithcard {
+  display: flex;
 }
