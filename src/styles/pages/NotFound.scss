@@ -1,7 +1,7 @@
+@import "../Mixins.scss";
+
 .wrapperNotFound {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexColumnCenter;
   font-size: 3rem;
   margin: 6rem 0;
   &__returnText {

@@ -6,7 +6,7 @@ import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
 import "../../styles/Layout/Payment.scss";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
-import { CgPaypal } from 'react-icons/cg';
+import { CgPaypal } from "react-icons/cg";
 const Payment = () => {
     const history = useHistory();
     const { total } = useContext(CartContext);
@@ -37,7 +37,7 @@ const Payment = () => {
         if (state.email && state.name && state.number && state.dates && state.cvc) {
             history.push("/payment-success");
         } else {
-            setErrorForm("Please complete all fields, before proceding to payment");
+            setErrorForm("Please complete all fields before payment!");
         }
     };
 
@@ -73,10 +73,17 @@ const Payment = () => {
                             {errorMessage}
                         </span>
 
-                        <button>PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px" }} /> </button>
-
-                        <div className='paywithcard'>    <div>______</div>   <h1 >OR</h1><div>______</div></div>
-                        <button >PAY WITH CARD <FaCcVisa style={{ fontSize: "30px" }} /> <FaCcMastercard style={{ fontSize: "30px" }} /> </button>
+                        <button>
+                            PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px" }} />
+                        </button>
+                        <div className="paywithcard">
+                            <div>______</div> <h1>OR</h1>
+                            <div>______</div>
+                        </div>
+                        <button>
+                            PAY WITH CARD <FaCcVisa style={{ fontSize: "30px" }} />
+                            <FaCcMastercard style={{ fontSize: "30px" }} />
+                        </button>
 
                         <label htmlFor="name">Name on Card</label>
                         <input
@@ -87,12 +94,7 @@ const Payment = () => {
                             onChange={handleInputs}
                         />
                     </div>
-                    <div>
-                        {" "}
-
-                    </div>
-
-
+                    <div> </div>
                     <input
                         type="text"
                         name="number"
@@ -103,8 +105,6 @@ const Payment = () => {
                         required
                         onChange={handleInputs}
                     />
-
-
                     <span
                         style={{
                             fontWeight: "bold",
@@ -112,7 +112,11 @@ const Payment = () => {
                         }}
                     >
                         {errorCard}
-                    </span>  <div> <BsFillCreditCard2BackFill /></div>
+                    </span>
+                    <div>
+
+                        <BsFillCreditCard2BackFill />
+                    </div>
                     <div className="containerPay__date">
                         <input
                             type="text"
@@ -134,8 +138,7 @@ const Payment = () => {
                             required
                             autoComplete="off"
                             onChange={handleInputs}
-                        />{" "}
-
+                        />
                     </div>
                     <div className="containerPay__country">
                         <label htmlFor="country">Country </label>
@@ -150,18 +153,18 @@ const Payment = () => {
                         />
                     </div>
                 </form>
+                <span
+                    style={{
+                        fontWeight: "bold",
+                        color: "red",
+                    }}
+                >
+                    {errorForm}
+                </span>
                 <div className="containerPay__btn">
-                    {" "}
-                    <span
-                        style={{
-                            fontWeight: "bold",
-                            color: "red",
-                        }}
-                    >
-                        {errorForm}
-                    </span>
+
                     <button onClick={handleValidation}> {`Pay: €${total}`} </button>
-                </div>{" "}
+                </div>
             </div>
         </>
     );

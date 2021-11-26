@@ -11,9 +11,7 @@
   }
 }
 .checkout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexColumnCenter;
 
   &__btn {
     @include buttonStyle;

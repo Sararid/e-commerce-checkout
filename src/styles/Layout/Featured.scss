@@ -5,7 +5,7 @@
     border: 1px solid rgba(0, 0, 0, 0.125);
     margin: 1rem;
     list-style: none;
-    @include flexColumn;
+    @include flexColumnWrap;
     align-content: space-around;
     justify-content: space-between;
     padding: 5px;
@@ -33,9 +33,7 @@
 }
 
 .featured__container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  @include flexColumnWrap;
   align-content: center;
   justify-content: center;
 }

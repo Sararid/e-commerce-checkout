@@ -1,9 +1,8 @@
+@import "../Mixins.scss";
+
 .processpay {
   height: 50vh;
-  display: flex;
-
-  flex-direction: column;
-  align-items: center;
+  @include flexColumnCenter;
   justify-content: space-around;
   text-align: center;
 }

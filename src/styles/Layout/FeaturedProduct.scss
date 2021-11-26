@@ -12,16 +12,11 @@
   }
   &__card {
     width: 10rem;
-    display: flex;
-    flex-direction: column;
+    @include flexColumnCenter;
     align-content: space-around;
-    align-items: center;
   }
   &__subcard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    @include flexColumnCenter;
     width: 50%;
   }
   &__image {
@@ -42,7 +37,7 @@
   }
   &__container {
     padding: 0;
-    @include flexColumn;
+    @include flexColumnWrap;
     align-items: center;
     justify-content: space-around;
     margin: 2rem 0;
@@ -81,7 +76,7 @@
 }
 
 .single-container {
-  @include flexColumn;
+  @include flexColumnWrap;
   justify-content: center;
   align-items: flex-start;
   align-content: space-between;
