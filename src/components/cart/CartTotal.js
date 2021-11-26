@@ -7,8 +7,8 @@ const CartTotal = ({ itemCount, total, clearCart }) => {
         <div className='cart__container--total'>
 
 
-            <p>Total items: {itemCount}</p>
-            <p>{`Total: €${total}`}</p>
+            <p>TOTAL ITEMS: {itemCount}</p>
+            <p>{`TOTAL: €${total}`}</p>
 
             <Link to='/checkout'><button>CHECKOUT</button></Link>
             <button onClick={() => clearCart()}>CLEAR CART </button>

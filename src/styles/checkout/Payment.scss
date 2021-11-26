@@ -33,6 +33,10 @@
       margin-top: 1rem;
       @include buttonStyle;
       width: 70%;
+      @media all and (max-width: 340px) {
+        height: 50px;
+        width: 75%;
+      }
     }
   }
 
@@ -89,7 +93,11 @@ label {
 
 .paywithcard {
   display: flex;
+  h1 {
+    font-size: 2rem;
+  }
 }
+
 span {
   text-align: center;
   padding: 0.3rem 0;

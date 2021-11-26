@@ -3,7 +3,6 @@ import { BsPlusCircle } from "react-icons/bs";
 import { FiTrash } from "react-icons/fi";
 import { BiMinusCircle } from "react-icons/bi";
 
-
 export const isInCart = (product, cartItems) => {
     return cartItems.find((item) => item.id === product.id);
 };

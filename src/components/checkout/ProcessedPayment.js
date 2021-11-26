@@ -16,7 +16,7 @@ const ProcessedPayment = () => {
             <h1 className="processpay__title"> Thank you for your order</h1>
 
             <p>We are currently processing your order and
-                will send you a confirmation email shortly
+                we will send you a confirmation email shortly...
             </p>
             <div>
                 <button className="processpay__btn"

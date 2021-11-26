@@ -44,6 +44,7 @@ const Payment = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        handleValidation();
     };
 
     const handleInputs = (e) => {
@@ -75,15 +76,15 @@ const Payment = () => {
                         </span>
 
                         <button>
-                            PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px" }} />
+                            PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
                         </button>
                         <div className="paywithcard">
                             <div>______</div> <h1>OR</h1>
                             <div>______</div>
                         </div>
                         <button>
-                            PAY WITH CARD <FaCcVisa style={{ fontSize: "30px" }} />
-                            <FaCcMastercard style={{ fontSize: "30px" }} />
+                            PAY WITH CARD <FaCcVisa style={{ fontSize: "30px", paddingRight: "6px" }} />
+                            <FaCcMastercard style={{ fontSize: "30px", paddingRight: "6px" }} />
                         </button>
 
                         <label htmlFor="name">Name on Card</label>

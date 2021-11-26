@@ -25,18 +25,17 @@ const Cart = () => {
         <section>
             <div className="cart__title">
                 <Link to="/shop">
-                    {" "}
+
                     <button className="cart__btn">
                         <AiOutlineArrowLeft />
                         Back to Shop
                     </button>
                 </Link>
-                <h1>CART </h1>
+                <h1>CART</h1>
             </div>
             <section className="cart">
                 {cartItems.length === 0 ? (
                     <div className="cart__container">
-                        {" "}
                         <h2> Your Cart is empty</h2>
                     </div>
                 ) : (

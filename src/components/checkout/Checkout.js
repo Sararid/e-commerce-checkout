@@ -19,12 +19,11 @@ const Checkout = () => {
                     <div className="checkout__summary">
                         <h1 className="checkout__title">Checkout Summary</h1>
                         <h2 className="checkout__subtitle">
-                            Total items:
-                            <span className="checkout__subtitle--item">{` ${itemCount}`}</span>
+                            TOTAL ITEMS:
+                            <span className="checkout__subtitle--item"> {`  ${itemCount}`}</span>
                         </h2>
                         <h2 className="checkout__subtitle">
-                            Amount to pay:
-                            <span className="checkout__subtitle--item">{` €${total}`}</span>
+                            AMOUNT TO PAY:  <span className="checkout__subtitle--item"> {`  €${total}`}</span>
                         </h2>
                     </div>
                 </div>

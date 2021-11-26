@@ -44,12 +44,12 @@
       @media all and (min-width: 768px) {
         margin: 1rem 2rem;
         margin-left: 5rem;
-        max-width: 546px;
+        max-width: 521px;
         @include flexRowCenter;
       }
       @media all and (min-width: 900px) {
         margin: 1rem 2rem;
-        max-width: 620px;
+        // max-width: 620px;
       }
       h2 {
         font-size: 1rem;
