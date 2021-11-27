@@ -31,7 +31,7 @@ const Payment = () => {
         if (!state.number || state.number.match(/^[a-zA-Z]+$/)) {
             setErrorCard("Please enter valid card number!");
         } else if (state.number.length < 16) {
-            setErrorCard("Please enter valid card 16 digit number!");
+            setErrorCard("Please enter a valid card 16 digit number!");
         } else {
             setErrorCard("");
         }
@@ -59,7 +59,7 @@ const Payment = () => {
                 <form className="containerPay__form" onSubmit={handleSubmit}>
                     <div className="containerPay__name">
                         <button>
-                            <a href="https://www.paypal.com/es/home" title="paypal" target='blank'>       PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
+                            <a href="https://www.paypal.com/es/home" title="paypal" target='blank'> PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
                             </a> </button>
                         <div className="paywithcard">
                             <div>______</div> <h1>OR </h1>
