@@ -8,7 +8,7 @@
 
 El proyecto consiste en crear una pasarela de pago sencilla que permite al usuario tener una experiencia cómoda a la hora de realizar el pago. El proyecto también contiene una web de comercio simple que permite al usuario seleccionar un producto y su cantidad antes de proceder a la pasarela de pago.
 
-![getway payment](https://github.com/Sararid/e-commerce-checkout/blob/main/src/gif/paymentget.gif =250x250)
+![getway payment](https://github.com/Sararid/e-commerce-checkout/blob/main/src/gif/paymentget.gif)
 
 ## Background
 
