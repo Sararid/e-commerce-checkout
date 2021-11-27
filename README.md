@@ -107,7 +107,7 @@ Aquí pueden encontrar una explicación de la estructura del proyecto.
 
 ```
 src
- ├─ components // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
+ ├─ components // los ficheros de esta carpeta se concatenan en el fichero app.js y este se guarda en public/main.js
  |  ├─checkout
  |    └─Checkout.js
  |    └─CountriesDropDown.js //fichero dónde se hace la llamada al api e integración de esta data en el select input.
