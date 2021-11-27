@@ -12,7 +12,7 @@ El proyecto consiste en crear una pasarela de pago sencilla que permite al usuar
 
 ## Background
 
-Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIGITAL 2021. He podido reeforzar con este ejercicio mis conocimientos de maquetación (HTML5/CSS3/SASS/MIXINS/BEM), JavaScript y ReactJS, y el uso de APIS externas. Con este proyecto tmabién he aprendido por primera vez el uso de **useContext** (parecido a redux), hook de React que me permite compartir y crear variables globales con diferentes componentes de mi aplicación.
+Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIGITAL 2021. He podido reforzar con este ejercicio mis conocimientos de maquetación (HTML5/CSS3/SASS/MIXINS/BEM), JavaScript y ReactJS, y el uso de APIS externas. Con este proyecto tmabién he aprendido por primera vez el uso de **useContext** (parecido a redux), hook de React que me permite compartir y crear variables globales con diferentes componentes de mi aplicación.
 
 # Objetivos principales y historias
 
