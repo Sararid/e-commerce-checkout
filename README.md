@@ -89,7 +89,6 @@ Este comando:
 - **Abre una ventana de tu navegador y muestra la página web** (http://localhost:3000/#/).
 - También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
   - Convierte los ficheros SASS en CSS.
-  - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
 
 Si deseas editar este proyecto después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
 
@@ -169,5 +168,179 @@ src
 
 ## License
 
-Inlcuir la licéncia y el link a esta
+[MIT](https://opensource.org/licenses/MIT)
+
+#### ENGLISH VERSION
+
+# Minimalistic-shop- checkout-payment-getaway
+
+# Code quality
+
+[![CodeFactor](https://www.codefactor.io/repository/github/sararid/e-commerce-checkout/badge)](https://www.codefactor.io/repository/github/sararid/e-commerce-checkout)
+
+# Project
+
+The project consists of creating a simple payment gateway that allows the user to have a comfortable experience when making the payment. The project also contains a simple commerce website that allows the user to select a product and its quantity before proceeding to the payment gateway.
+
+![getway payment](https://github.com/Sararid/e-commerce-checkout/blob/main/src/gif/paymentget.gif)
+
+## Background
+
+This project is a practical exercise to participate in the JUMP2DIGITAL 2021 hackathon. With this exercise I have been able to reinforce my knowledge of front-end (HTML5 / CSS3 / SASS / MIXINS / BEM), JavaScript and ReactJS, and the use of external APIs.
+With this project I have also learned for the first time the use of ** useContext ** (similar to redux), React hook that allows me to create and share global variables with different components of my application.
+
+# Main objectives and user stories
+
+1. Layout skills
+
+2. Use of third-party Apis to fill in form fields
+
+- [x] Task 1 → I can see the PC view correctly.
+- [x] Task 2 → I can see the mobile view correctly.
+- [x] Task 3 → If I enter a field that does not correspond to a credit card pattern, an error occurs.
+- [x] Task 4 → If I enter an email that does not correspond to the email pattern, a warning error appears.
+- [x] Task 5 → I can choose to see the complete list of countries.
+
+## Stack
+
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+:More efficient component structure and use of router, and hooks such as useContext, useEffect or useState, etc.
+
+![](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+:Website layout.
+
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+:Styling of the website.
+
+![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+![](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+:Framework of CSS to facilitate the use of CSS3 and make it more practical. Also, use of **mixins** and **variables** in order to improve the code and make it more efficient. Flex was used to design parts of the layout and react bootstrap to build e. g. the hero.
+
+![](https://img.shields.io/badge/gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
+:Compilation system to automate repetitive workflows and compose them into efficient build pipelines.
+
+![](https://img.shields.io/badge/NPM-20232A?style=for-the-badge&logo=npm&logoColor=61DAFB)
+:Facilitates Node.js default package management.
+
+![](https://img.shields.io/badge/Git-F74E27?style=for-the-badge&logo=git&logoColor=white)
+:Version control.
+
+## API
+
+Two third-party APIs have been used for this project:
+
+1. External API to fetch products from the website. => (https://fakestoreapi.com/products)
+2. External API to render the list of countries in the "select" field of the payment form. => (https://restcountries.com/v3.1/all)
+
+## Installation
+
+** NOTE: ** [Node JS] (https://nodejs.org/) is required to work with this Starter Kit:
+
+_Steps to follow to start a project from scratch: _
+
+1. ** Clone this repository from GitHub **.
+1. ** Open a terminal ** in the root folder of the repository.
+1. ** Install the local dependencies ** by executing the command in the terminal:
+
+```bash
+npm install
+```
+
+** Steps to start the project: **
+
+Once all the dependencies are installed, the project can be started. ** to start the project ** run the command:
+
+```bash
+npm start
+```
+
+This command:
+
+- ** Open a window of your browser and show the web page ** (http: // localhost: 3000 / # /).
+- It also ** processes the ** HTML, SASS / CSS and JS files and ** generates and saves them in the `public /` ** folder. For instance:
+  - Convert SASS files into CSS.
+
+If you want to edit this project after executing `npm start` you can start editing all the files that are inside the`src /`folder and programming comfortably.
+
+** To generate my page for production run the command: **
+
+```bash
+npm run githubpages
+```
+
+A shortcut that generates the production version and pushes the `docs /` folder at once. We recommend looking at the `package.json` file to learn how it works.
+
+Also instead of cloning the repository, you can conveniently download it to your local server for review.
+
+## Folder structure
+
+Please find below the explanation of the structure of the project.
+
+```
+src
+ ├─ components // The files in this folder contain all the components that are concatenated in the App.js and index.js files.
+ |  ├─checkout
+ |    └─Checkout.js
+ |    └─CountriesDropDown.js // File where the call to the API is made and the list of countries is integrated in the select input.
+ |    └─Payment.js // File where the payment gateway form is found with all the fields to be filled in by the user.
+ |    └─ProcessedPayment.js // File where the successful payment page is located, which the user accesses once the payment gateway has been filled in correctly.
+ |  ├─cart // Folder where the components are listed with the information of the products selected by the user.
+ |    └─Cart.js
+ |    └─CartItem.js
+ |    └─CartTotal.js
+ |  ├─layout // Folder containing header, footer and hero files, as well as the page-not-found component.
+ |    └─Header.js
+ |    └─Footer.js
+ |    └─Hero.js
+ |    └─Main.js
+ |    └─NotFound.js
+ |  ├─ products // Folder that contains the components that render the products on the main page and in the page "/shop", and individually.
+ |    └─FeaturesdProdDetail.js
+ |    └─FeaturedProduct.js
+ |    └─FeaturedCollection.js
+ |  ├─ App.js // Main file where I render all the components created.
+ |  ├─ context // Folder where I keep the variables and global functions to share with the rest of the components (in order not to use Props).
+ |     └─cart-context.js
+ |     └─cart-reducers.js
+ |     └─products-context.js
+ |  ├─ images
+ |  ├─service // Folder that contains the API used to look for the data of all the countries in order to paint them in the form field of the payment gateway.
+ |     └─api.js
+ |  ├─styles // Folder where the style files of the components are located, divided into folders with a similar structure to that of the components.
+ |   ├─Layout
+ |     └─Header.scss
+ |     └─Footer.scss
+ |     └─Hero.scss
+ |     └─Main.scss
+ |     └─NotFound.scss
+ |   ├─cart
+ |     └─Cart.scss
+ |   ├─checkout
+ |     └─Checkout.scss
+ |     └─Payment.scss
+ |     └─ProcessPayment.scss
+ |   ├─products
+ |     └─Featured.scss
+ |       └─FeaturedProduct.scss
+ |   ├─ App.scss
+ |   ├─ Mixins.scss // File where my global functions are stored.
+ |   ├─ Variables.scss
+ |   ├─ index.js
+
+
+```
+
+## Contact info
+
+<a href="mailto:sarayridouane@gmail.com"><img src="https://img.icons8.com/color/35/000000/gmail.png" alt="email"/></a>
+<a href="https://www.linkedin.com/in/sara-rd"><img src="https://img.icons8.com/color/35/000000/linkedin.png" alt="linkedin"/></a>
+<a href="https://twitter.com/sara_rid" target="blank"><img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="sara_rid" height="30" width="40" /></a>
+
+## License
+
 [MIT](https://opensource.org/licenses/MIT)
