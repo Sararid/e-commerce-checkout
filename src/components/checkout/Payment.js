@@ -7,7 +7,7 @@ import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import { CgPaypal } from "react-icons/cg";
-import { Link } from "react-router-dom";
+
 const Payment = () => {
     const history = useHistory();
     const { total } = useContext(CartContext);
