@@ -187,7 +187,7 @@ The project consists of creating a simple payment gateway that allows the user t
 ## Background
 
 This project is a practical exercise to participate in the JUMP2DIGITAL 2021 hackathon. With this exercise I have been able to reinforce my knowledge of front-end (HTML5 / CSS3 / SASS / MIXINS / BEM), JavaScript and ReactJS, and the use of external APIs.
-With this project I have also learned for the first time the use of ** useContext ** (similar to redux), React hook that allows me to create and share global variables with different components of my application.
+With this project I have also learned for the first time the use of **useContext** (similar to redux), React hook that allows me to create and share global variables with different components of my application.
 
 # Main objectives and user stories
 
@@ -239,21 +239,21 @@ Two third-party APIs have been used for this project:
 
 ## Installation
 
-** NOTE: ** [Node JS] (https://nodejs.org/) is required to work with this Starter Kit:
+**NOTE:** [Node JS] (https://nodejs.org/) is required to work with this Starter Kit:
 
 _Steps to follow to start a project from scratch: _
 
-1. ** Clone this repository from GitHub **.
-1. ** Open a terminal ** in the root folder of the repository.
-1. ** Install the local dependencies ** by executing the command in the terminal:
+1. **Clone this repository from GitHub**.
+1. **Open a terminal** in the root folder of the repository.
+1. **Install the local dependencies** by executing the command in the terminal:
 
 ```bash
 npm install
 ```
 
-** Steps to start the project: **
+**Steps to start the project:**
 
-Once all the dependencies are installed, the project can be started. ** to start the project ** run the command:
+Once all the dependencies are installed, the project can be started. **to start the project** run the command:
 
 ```bash
 npm start
@@ -261,13 +261,13 @@ npm start
 
 This command:
 
-- ** Open a window of your browser and show the web page ** (http: // localhost: 3000 / # /).
-- It also ** processes the ** HTML, SASS / CSS and JS files and ** generates and saves them in the `public /` ** folder. For instance:
+- **Open a window of your browser and show the web page** (http: // localhost: 3000 / # /).
+- It also processes the **HTML, SASS / CSS and JS files and** generates and saves them in the `public /` folder. For instance:
   - Convert SASS files into CSS.
 
 If you want to edit this project after executing `npm start` you can start editing all the files that are inside the`src /`folder and programming comfortably.
 
-** To generate my page for production run the command: **
+**To generate my page for production run the command:**
 
 ```bash
 npm run githubpages
