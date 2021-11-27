@@ -8,6 +8,8 @@
 
 El proyecto consiste en crear una pasarela de pago sencilla que permite al usuario tener una experiencia cómoda a la hora de realizar el pago. El proyecto también contiene una web de comercio simple que permite al usuario seleccionar un producto y su cantidad antes de proceder a la pasarela de pago.
 
+![](name-of-giphy.gif)
+
 ## Background
 
 Este proyecto es un ejercicio práctico para participar en la hackathon JUMP2DIGITAL 2021. He podido reeforzar con este ejercicio mis conocimientos de maquetación (HTML5/CSS3/SASS/MIXINS/BEM), JavaScript y ReactJS, y el uso de APIS externas. Con este proyecto tmabién he aprendido por primera vez el uso de **useContext** (parecido a redux), hook de React que me permite compartir y crear variables globales con diferentes componentes de mi aplicación.
