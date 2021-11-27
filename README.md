@@ -109,17 +109,17 @@ Aquí pueden encontrar una explicación de la estructura del proyecto.
 
 ```
 src
- ├─ components // los ficheros de esta carpeta se concatenan en el fichero app.js y este se guarda en public/main.js
+ ├─ components // los ficheros de esta carpeta contiene todos los componentes que se concatenan en el fichero App.js e index.js.
  |  ├─checkout
  |    └─Checkout.js
- |    └─CountriesDropDown.js //fichero dónde se hace la llamada al api e integración de esta data en el select input.
- |    └─Payment.js //fichero dónde se encuentra el formulario de la pasarela de pago con todos los campos a rellanar por el usuario.
- |    └─ProcessedPayment.js // Fichero dónde se encuentre la página de pago realizado con éxito al que el usuario accede una vez rellenada la pasarela de pago correctamente.
- |  ├─cart
+ |    └─CountriesDropDown.js //fichero donde se hace la llamada al api e integración de la lista de países en el select input.
+ |    └─Payment.js //fichero donde se encuentra el formulario de la pasarela de pago con todos los campos a rellanar por el usuario.
+ |    └─ProcessedPayment.js // Fichero donde se encuentre la página de pago realizado con éxito al que el usuario accede una vez rellenada la pasarela de pago correctamente.
+ |  ├─cart //carpeta donde figuran los componentes con la información de los productos seleccionados por el usuario
  |    └─Cart.js
  |    └─CartItem.js
  |    └─CartTotal.js
- |  ├─layout
+ |  ├─layout //carpeta que contiene los ficheros de cabercera, footer y hero , así como el componente de página no encontrada
  |    └─Header.js
  |    └─Footer.js
  |    └─Hero.js
@@ -130,14 +130,14 @@ src
  |    └─FeaturedProduct.js
  |    └─FeaturedCollection.js
  |  ├─ App.js // fichero principal donde renderizo todos los componentes creados
- |  ├─ context
+ |  ├─ context //carpeta donde guardo las varibales y funciones globales para compartir con el resto de componentes (para no utilizar Props)
  |     └─cart-context.js
  |     └─cart-reducers.js
  |     └─products-context.js
  |  ├─ images
  |  ├─service //carpeta dónde se encuentra el api que utilizo para buscar los datos de todos los países y así pintarlos en el campo del formulario de la pasarela de pago.
  |     └─api.js
- |  ├─styles
+ |  ├─styles // carpeta donde se encuentra los ficheros de estilo de los componentes divididas en carpetas con similar estructura a la de los componentes.
  |   ├─Layout
  |     └─Header.scss
  |     └─Footer.scss
@@ -154,7 +154,7 @@ src
  |     └─Featured.scss
  |       └─FeaturedProduct.scss
  |   ├─ App.scss
- |   ├─ Mixins.scss
+ |   ├─ Mixins.scss //fichero donde guardo mis funciones globales
  |   ├─ Variables.scss
  |   ├─ index.js
 
