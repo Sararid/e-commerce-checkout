@@ -1,4 +1,4 @@
-# E-commerce-Minimalistic-checkout-payment-getaway
+# Minimalistic-shop-checkout-payment-getaway
 
 # Calidad de código
 
