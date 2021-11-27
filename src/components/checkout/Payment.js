@@ -7,7 +7,7 @@ import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import { CgPaypal } from "react-icons/cg";
-
+import { Link } from "react-router-dom";
 const Payment = () => {
     const history = useHistory();
     const { total } = useContext(CartContext);
@@ -59,8 +59,8 @@ const Payment = () => {
                 <form className="containerPay__form" onSubmit={handleSubmit}>
                     <div className="containerPay__name">
                         <button>
-                            PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
-                        </button>
+                            <a href="https://www.paypal.com/es/home" title="paypal" target='blank'>       PAY WITH PAYPAL <CgPaypal style={{ fontSize: "30px", paddingRight: "6px" }} />
+                            </a> </button>
                         <div className="paywithcard">
                             <div>______</div> <h1>OR </h1>
                             <div>______</div>
