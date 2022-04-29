@@ -4,12 +4,12 @@
   height: 60vh;
   position: relative;
   &__img {
-    height: 40vh;
+    height: 70vh;
     @media all and (min-width: 768px) {
       height: 60vh;
     }
     @media all and (min-width: 1200px) {
-      height: 70vh;
+      height:85vh;
     }
   }
   &__text {

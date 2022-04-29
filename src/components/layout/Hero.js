@@ -14,13 +14,11 @@ const Hero = () => {
                     src={hero2}
                     alt="First slide"
                 />
-
                     <Carousel.Caption>
                         <h1 className="hero__text--title">Welcome to RANDA</h1>
                         <Link to={"/shop"}>
-                            {" "}
                             <Button variant="light" className="hero__text--btn">Shop now</Button>
-                        </Link>{" "}
+                        </Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -33,9 +31,9 @@ const Hero = () => {
                     <Carousel.Caption>
                         <h1 className="hero__text--title">Welcome to RANDA</h1>
                         <Link to={"/shop"}>
-                            {" "}
+
                             <Button variant="light" className="hero__text--btn">Shop now</Button>
-                        </Link>{" "}
+                        </Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -44,14 +42,11 @@ const Hero = () => {
                         src={hero3}
                         alt="Third slide"
                     />
-
-
                     <Carousel.Caption>
                         <h1 className="hero__text--title">Welcome to RANDA</h1>
                         <Link to={"/shop"}>
-                            {" "}
                             <Button variant="light" className="hero__text--btn">Shop now</Button>
-                        </Link>{" "}
+                        </Link>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

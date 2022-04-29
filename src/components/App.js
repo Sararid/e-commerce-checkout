@@ -22,7 +22,8 @@ function App() {
           <Hero />
           <Main />
           <FeauturedCollection />
-        </Route>  <Route path="/product/:productId">
+        </Route>
+        <Route path="/product/:productId">
           <FeaturedProdDetails />
         </Route>
         <Route path="/shop">
