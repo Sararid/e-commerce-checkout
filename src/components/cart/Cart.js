@@ -53,7 +53,7 @@ const Cart = () => {
                             clearCart={clearCart}
                         />
                     </>
-                )}{" "}
+                )}
             </section>
         </section>
     );
