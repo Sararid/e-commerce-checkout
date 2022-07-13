@@ -1,12 +1,12 @@
-@import "../Variables.scss";
-@import "../Mixins.scss";
+@import '../../../styles/Variables.scss';
+@import '../../../styles/Mixins.scss';
 .hero {
   height: 60vh;
   position: relative;
   &__img {
-    height: 70vh;
+    height: 60vh;
     @media all and (min-width: 768px) {
-      height: 60vh;
+      height: 65vh;
     }
     @media all and (min-width: 1200px) {
       height:85vh;

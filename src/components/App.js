@@ -1,7 +1,7 @@
 import "../styles/App.scss";
 import { Switch, Route } from "react-router-dom";
-import Header from "./layout/Header";
-import Hero from "./layout/Hero";
+import Header from "./layout/Header/Header";
+import Hero from "./layout/Hero/Hero";
 import Main from "./layout/Main";
 import Footer from "./layout/Footer";
 import FeauturedCollection from "./products/FeauturedCollection";

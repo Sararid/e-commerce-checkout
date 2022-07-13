@@ -1,33 +1,52 @@
-@import "../Variables.scss";
-@import "../Mixins.scss";
+
+@import '../../../styles/Variables.scss';
+@import '../../../styles/Mixins.scss';
 
 .header {
-  margin: 2rem 0;
+ // margin: 2rem;
+  height: 50px;
   font-family: inherit;
+     &__container{
+        @include flexRowCenter;
+          justify-content: space-around;
+      position: fixed;
+      width: 90%;
+      margin: 1rem;
+      margin-top: 1rem;
+      background-color: pink;
+      z-index: 1;
+     }
   &__nav {
     margin-top: 2rem;
     padding: 0;
-    display: flex;
-
-    align-items: center;
+  @include flexRowCenter;
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style: none;
-    &--underline {
-      border: solid $paleOrange 2px;
-    }
+  
     &--link {
       list-style: none;
       text-decoration: none;
       color: $black;
       font-weight: bold;
+      font-size: 1em;
+
+            @media all and (min-width: 768px) {
+              padding-left: 2rem;
+            }
     }
     &--link:hover {
       cursor: pointer;
       color: $orange;
     }
+    li {
+   
+      @media all and (min-width: 768px) {
+          padding-left:2rem;
+        }
+    }
     @media all and (min-width: 768px) {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
   &__icon {
@@ -46,9 +65,9 @@
   @include flexColumnCenter;
 
   &__img {
-    width: 230px;
+    width: 100px;
     @media all and (min-width: 768px) {
-      width: 350px;
+      width: 250px;
     }
   }
 }
